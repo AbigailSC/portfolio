@@ -20,7 +20,7 @@ export const About = () => {
   const [hobbiesDisplay, setHobbiesDisplay] = useState(false);
 
   return (
-    <div className="h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="h-full bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
         <h2 className="p-5 text-white">_aboutMe</h2>

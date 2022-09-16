@@ -17,7 +17,7 @@ export const Project = ({ name, img, index }) => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis adipisci suscipit
           </p>
           <Link to={name}>
-            <button className="px-4 py-3 text-white bg-slate-700 rounded-xl">viewProject</button>
+            <button className="px-4 py-3 text-white bg-slate-800 rounded-xl">viewProject</button>
           </Link>
         </div>
       </div>
