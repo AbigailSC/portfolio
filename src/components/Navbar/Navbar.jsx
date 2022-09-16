@@ -13,7 +13,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-end py-3 md:py-5 md:block">
           <div className="md:hidden">
             <button
-              className="px-4 py-2 text-slate-700 outline-none focus:text-white"
+              className="px-4 py-2 outline-none text-slate-700 focus:text-white"
               onClick={() => setNavbar(!navbar)}
             >
               {navbar ? (
@@ -48,22 +48,22 @@ export const Navbar = () => {
           <div className={`md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
             <ul className="items-center justify-center space-y-8 md:flex md:space-y-0">
               <Link to="/" className="focus:text-white">
-                <li className="bg-gray-900 px-8 py-4 text-xl text-center font-medium border-t border-b border-slate-700 md:border-r md:text-sm md:border-b-0 md:border-t-0">
+                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-t border-b border-slate-700 md:border-r md:text-sm md:border-b-0 md:border-t-0">
                   _hello
                 </li>
               </Link>
               <Link to="/aboutMe" className="focus:text-white">
-                <li className="bg-gray-900 px-8 py-4 text-xl text-center font-medium border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
+                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
                   _aboutMe
                 </li>
               </Link>
               <Link to="/projects" className="focus:text-white">
-                <li className="bg-gray-900 px-8 py-4 text-xl text-center font-medium border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
+                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
                   _projects
                 </li>
               </Link>
               <Link to="/contact" className="focus:text-white">
-                <li className="bg-gray-900 px-8 py-4 text-xl text-center font-medium border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
+                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
                   _contact
                 </li>
               </Link>
