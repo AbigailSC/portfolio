@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Navbar } from "../Navbar/Navbar";
 import { Project } from "../Project/Project";
-import projects from "../utils/dataProjects.js";
+import { projects } from "../utils/dataProjects.js";
 import { filterTecnologiesFunc } from "../utils/filterTecnologies.js";
 import { RiArrowRightSFill, RiArrowDownSFill } from "react-icons/ri";
 import { SiReact, SiRedux, SiTypescript, SiHtml5, SiCss3 } from "react-icons/si";
@@ -41,66 +41,82 @@ export const Projects = () => {
             projectsDisplay ? "flex flex-col" : "hidden"
           }`}
         >
-          <label className="flex items-center">
+          <label className="flex items-center group">
             <input
-              type="checkbox"
+              type="radio"
               id="React"
-              name="React"
+              name="lenguage"
               onChange={(e) => handleChecked(e)}
-              className="w-4 h-4 mr-4 leading-tight bg-gray-100 border-gray-300 accent-rose-700 focus:none"
+              className="w-4 h-4 mr-4 leading-tight bg-gray-100 border-gray-300 accent-rose-700 focus:none "
             />
-            <SiReact className="mr-2" />
-            <span>React</span>
+            <SiReact className="mr-2 group-hover:text-[#61DBFB] transition duration-300 ease-in-out group-hover:transition-all" />
+            <span className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+              React
+            </span>
           </label>
-          <label className="flex items-center">
+          <label className="flex items-center group">
             <input
-              type="checkbox"
+              type="radio"
               id="Redux"
-              name="Redux"
+              name="lenguage"
               onChange={(e) => handleChecked(e)}
               className="w-4 h-4 mr-4 leading-tight bg-gray-100 border-gray-300 accent-rose-700 focus:none"
             />
-            <SiRedux className="mr-2" />
-            <span>Redux</span>
+            <SiRedux className="mr-2 group-hover:text-[#764ABC] transition duration-300 ease-in-out group-hover:transition-all" />
+            <span className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+              Redux
+            </span>
           </label>
-          <label className="flex items-center">
+          <label className="flex items-center group">
             <input
-              type="checkbox"
+              type="radio"
               id="Typescript"
-              name="Typescript"
+              name="lenguage"
               onChange={(e) => handleChecked(e)}
               className="w-4 h-4 mr-4 leading-tight bg-gray-100 border-gray-300 accent-rose-700 focus:none"
             />
-            <SiTypescript className="mr-2" />
-            <span>Typescript</span>
+            <SiTypescript className="mr-2 group-hover:text-[#2d79c7] transition duration-300 ease-in-out group-hover:transition-all" />
+            <span className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+              Typescript
+            </span>
           </label>
-          <label className="flex items-center">
+          <label className="flex items-center group">
             <input
-              type="checkbox"
+              type="radio"
               id="HTML"
-              name="HTML"
+              name="lenguage"
               onChange={(e) => handleChecked(e)}
               className="w-4 h-4 mr-4 leading-tight bg-gray-100 border-gray-300 accent-rose-700 focus:none"
             />
-            <SiHtml5 className="mr-2" />
-            <span>HTML</span>
+            <SiHtml5 className="mr-2 group-hover:text-[#F16524] transition duration-300 ease-in-out group-hover:transition-all" />
+            <span className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+              HTML
+            </span>
           </label>
-          <label className="flex items-center">
+          <label className="flex items-center group">
             <input
-              type="checkbox"
+              type="radio"
               id="CSS"
-              name="CSS"
+              name="lenguage"
               onChange={(e) => handleChecked(e)}
               className="w-4 h-4 mr-4 leading-tight bg-gray-100 border-gray-300 accent-rose-700 focus:none"
             />
-            <SiCss3 className="mr-2" />
-            <span>CSS</span>
+            <SiCss3 className="mr-2 group-hover:text-[#2EA3D5] transition duration-300 ease-in-out group-hover:transition-all" />
+            <span className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+              CSS
+            </span>
           </label>
         </div>
         <div className="">
           <div className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
             {projects.map((project, index) => (
-              <Project key={index} name={project.name} img={project.img} index={index} />
+              <Project
+                key={index}
+                name={project.name}
+                img={project.img}
+                index={index}
+                description={project.description}
+              />
             ))}
           </div>
         </div>

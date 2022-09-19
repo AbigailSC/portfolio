@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Project = ({ name, img, index }) => {
+export const Project = ({ name, img, index, description }) => {
   return (
     <div className="flex flex-col gap-4 m-6">
       <div className="flex gap-2 mb-2 text-xl">
@@ -13,9 +13,7 @@ export const Project = ({ name, img, index }) => {
           <img src={img} alt={`image project ${index}`} className="" />
         </figure>
         <div className="flex flex-col gap-5 p-8">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis adipisci suscipit
-          </p>
+          <p>{description}</p>
           <Link to={name}>
             <button className="px-4 py-3 text-white bg-slate-800 rounded-xl">viewProject</button>
           </Link>
