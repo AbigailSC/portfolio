@@ -44,7 +44,7 @@ export const About = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
-      <section className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
+      <section className="flex flex-col gap-1 pt-20 text-xl ">
         <h2 className="p-5 text-white">_aboutMe</h2>
 
         <button

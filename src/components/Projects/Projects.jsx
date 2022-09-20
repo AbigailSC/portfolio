@@ -109,7 +109,7 @@ export const Projects = () => {
           </label>
         </div>
         <div className="">
-          <div className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
+          <div className="flex flex-col gap-1 pt-20 text-xl">
             {projects.map((project, index) => (
               <Project
                 key={index}

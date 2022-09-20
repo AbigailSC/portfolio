@@ -12,7 +12,7 @@ export const Contact = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
-      <section className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
+      <section className="flex flex-col gap-1 pt-20 text-xl ">
         <h2 className="p-5 text-white">_contact</h2>
         <button
           className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all"
