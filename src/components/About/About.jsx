@@ -22,6 +22,7 @@ import {
   SiSequelize,
   SiTypescript,
 } from "react-icons/si";
+import { FcDocument } from "react-icons/fc";
 import { Footer } from "../Footer/Footer";
 
 export const About = () => {
@@ -29,17 +30,134 @@ export const About = () => {
 
   const [personaInfoDisplay, setPersonalInfoDisplay] = useState(false);
 
+  const [tecnologies, setTecnologies] = useState(false);
+
+  const [profInfoDisplay, setProfInfoDisplay] = useState(false);
+
   // *Subcategorias:
 
   const [interests, setInterests] = useState(false); // *Interests
 
   const [education, setEducation] = useState(false); // *Education
 
-  const [tecnologies, setTecnologies] = useState(false); // * Tecnologies
+  const [hobbiesDisplay, setHobbiesDisplay] = useState(false); // *Hobbies
 
-  const [profInfoDisplay, setProfInfoDisplay] = useState(false);
+  const displayMainInfo = (e) => {
+    e.preventDefault();
+    switch (e.target.value) {
+      case "interests":
+        setFrontend(false);
+        setBackend(false);
+        setOthers(false);
+        setProfessionalExp(false);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(false);
+        setInterestDetail(true);
+        break;
+      case "university":
+        setFrontend(false);
+        setBackend(false);
+        setOthers(false);
+        setProfessionalExp(false);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(true);
+        setEducationCoursesDetail(false);
+        setInterestDetail(false);
+        break;
+      case "secundary":
+        setFrontend(false);
+        setBackend(false);
+        setOthers(false);
+        setProfessionalExp(false);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(true);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(false);
+        setInterestDetail(false);
+        break;
+      case "courses":
+        setFrontend(false);
+        setBackend(false);
+        setOthers(false);
+        setProfessionalExp(false);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(true);
+        setInterestDetail(false);
+        break;
+      case "hobbies":
+        setFrontend(false);
+        setBackend(false);
+        setOthers(false);
+        setProfessionalExp(false);
+        setHobbiesDetail(true);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(false);
+        setInterestDetail(false);
+        break;
+      case "professionalExperience":
+        setFrontend(false);
+        setBackend(false);
+        setOthers(false);
+        setProfessionalExp(true);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(false);
+        setInterestDetail(false);
+        break;
+      case "frontend":
+        setFrontend(true);
+        setBackend(false);
+        setOthers(false);
+        setProfessionalExp(false);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(false);
+        setInterestDetail(false);
+        break;
+      case "backend":
+        setFrontend(false);
+        setBackend(true);
+        setOthers(false);
+        setProfessionalExp(false);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(false);
+        setInterestDetail(false);
+        break;
+      case "others":
+        setFrontend(false);
+        setBackend(false);
+        setOthers(true);
+        setProfessionalExp(false);
+        setHobbiesDetail(false);
+        setEducationSecundaryDetail(false);
+        setEducationUniversityDetail(false);
+        setEducationCoursesDetail(false);
+        setInterestDetail(false);
+        break;
+      default:
+        <p>nadaaa</p>;
+    }
+  };
 
-  const [hobbiesDisplay, setHobbiesDisplay] = useState(false);
+  const [interestsDetail, setInterestDetail] = useState(false);
+  const [educationSecundaryDetail, setEducationSecundaryDetail] = useState(false);
+  const [educationUniversityDetail, setEducationUniversityDetail] = useState(false);
+  const [educationCoursesDetail, setEducationCoursesDetail] = useState(false);
+  const [hobbiesDetail, setHobbiesDetail] = useState(false);
+  const [professionalExp, setProfessionalExp] = useState(false);
+  const [frontend, setFrontend] = useState(false);
+  const [backend, setBackend] = useState(false);
+  const [others, setOthers] = useState(false);
 
   return (
     <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
@@ -63,13 +181,15 @@ export const About = () => {
             <AiFillFolder className="text-red-300" />
             interests
           </button>
-          <div className={`py-6 px-6 ${interests ? "flex flex-col" : "hidden"}`}>
-            <p>
-              I am very interested in learning new things, I really like web design and user
-              interface design, I am constantly learning and updating my knowledge. My goal is to
-              gain experience in the area of Web Development and collaborate with the company I work
-              for in order to provide quality service to potential or current clients.
-            </p>
+          <div className={`py-2 pl-12 items-start ${interests ? "flex flex-col" : "hidden"}`}>
+            <button
+              value="interests"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1"
+            >
+              <FcDocument />
+              interests
+            </button>
           </div>
           <button
             className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
@@ -79,12 +199,31 @@ export const About = () => {
             <AiFillFolder className="text-green-300" />
             education
           </button>
-          <div className={`py-6 px-6 ${education ? "flex flex-col" : "hidden"}`}>
-            <p>
-              I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I studied
-              graphic design for a year at the uba and graduated as a computer technician at the
-              technical high school.
-            </p>
+          <div className={`py-2 pl-12 items-start ${education ? "flex flex-col" : "hidden"}`}>
+            <button
+              value="university"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1"
+            >
+              <FcDocument />
+              university
+            </button>
+            <button
+              value="secundary"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1"
+            >
+              <FcDocument />
+              secundary
+            </button>
+            <button
+              value="courses"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1"
+            >
+              <FcDocument />
+              courses
+            </button>
           </div>
 
           <button
@@ -95,11 +234,15 @@ export const About = () => {
             <AiFillFolder className="text-blue-300" />
             hobbies
           </button>
-          <div className={`py-6 px-6 ${hobbiesDisplay ? "flex flex-col" : "hidden"}`}>
-            <p>
-              My hobbies are researching new trends in web design, digital drawing, playing video
-              games, streaming, coding and listening to music.
-            </p>
+          <div className={`py-2 pl-12 items-start ${hobbiesDisplay ? "flex flex-col" : "hidden"}`}>
+            <button
+              value="hobbies"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1"
+            >
+              <FcDocument />
+              hobbies
+            </button>
           </div>
         </div>
 
@@ -110,8 +253,15 @@ export const About = () => {
           {profInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
           professionalInfo
         </button>
-        <div className={`py-6 px-6 ${profInfoDisplay ? "flex flex-col" : "hidden"}`}>
-          <p>I currently have no work experience.</p>
+        <div className={`py-2 pl-12 items-start ${profInfoDisplay ? "flex flex-col" : "hidden"}`}>
+          <button
+            value="professionalExperience"
+            onClick={(e) => displayMainInfo(e)}
+            className="flex items-center gap-1"
+          >
+            <FcDocument />
+            professionalExperience
+          </button>
         </div>
 
         <button
@@ -122,12 +272,62 @@ export const About = () => {
           tecnologies
         </button>
         <div
-          className={`py-6 border-b border-slate-700 px-6 ${
+          className={`py-2 pl-12 items-start border-b border-slate-700 px-6 ${
             tecnologies ? "flex flex-col" : "hidden"
           }`}
         >
-          <ul>
-            <li>
+          <button
+            value="frontend"
+            onClick={(e) => displayMainInfo(e)}
+            className="flex items-center gap-1"
+          >
+            <FcDocument />
+            frontEnd
+          </button>
+          <button
+            value="backend"
+            onClick={(e) => displayMainInfo(e)}
+            className="flex items-center gap-1"
+          >
+            <FcDocument />
+            backEnd
+          </button>
+          <button
+            value="others"
+            onClick={(e) => displayMainInfo(e)}
+            className="flex items-center gap-1"
+          >
+            <FcDocument />
+            others
+          </button>
+        </div>
+        <main className="px-6 py-8">
+          {interestsDetail ? (
+            <p>
+              I am very interested in learning new things, I really like web design and user
+              interface design, I am constantly learning and updating my knowledge. My goal is to
+              gain experience in the area of Web Development and collaborate with the company I work
+              for in order to provide quality service to potential or current clients.
+            </p>
+          ) : educationSecundaryDetail ? (
+            <p>
+              I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I studied
+              graphic design for a year at the uba and graduated as a computer technician at the
+              technical high school.
+            </p>
+          ) : educationUniversityDetail ? (
+            <p>university</p>
+          ) : educationCoursesDetail ? (
+            <p>henry</p>
+          ) : hobbiesDetail ? (
+            <p>
+              My hobbies are researching new trends in web design, digital drawing, playing video
+              games, streaming, coding and listening to music.
+            </p>
+          ) : professionalExp ? (
+            <p>I currently have no work experience.</p>
+          ) : frontend ? (
+            <div>
               <h3 className="text-white">// Front end</h3>
               <ul className="flex flex-col gap-1 my-2">
                 <li className="flex items-center gap-2 group">
@@ -184,15 +384,10 @@ export const About = () => {
                     Styled components
                   </p>
                 </li>
-                <li className="flex items-center gap-2 group">
-                  <SiFigma className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Figma
-                  </p>
-                </li>
               </ul>
-            </li>
-            <li>
+            </div>
+          ) : backend ? (
+            <div>
               <h3 className="text-white">// Back end</h3>
               <ul className="flex flex-col gap-1 my-2">
                 <li className="flex items-center gap-2 group">
@@ -226,8 +421,9 @@ export const About = () => {
                   </p>
                 </li>
               </ul>
-            </li>
-            <li>
+            </div>
+          ) : others ? (
+            <div>
               <h3 className="text-white">// Others</h3>
               <ul className="flex flex-col gap-1 my-2">
                 <li className="flex items-center gap-2 group">
@@ -237,36 +433,41 @@ export const About = () => {
                   </p>
                 </li>
                 <li className="flex items-center gap-2 group">
+                  <SiFigma className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
+                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                    Figma
+                  </p>
+                </li>
+                <li className="flex items-center gap-2 group">
                   <SiAdobephotoshop className="group-hover:text-[#2DA9FF] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
                     Adobe photoshop
                   </p>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </div>
-        <main className="flex flex-col gap-8 px-6 py-8">
-          <h3 className="text-white">// personalInfo</h3>
-          <div className="flex flex-col gap-8 md:flex-row md:items-center">
-            <img
+            </div>
+          ) : (
+            <div className="flex flex-col gap-1">
+              <h3 className="text-white">// personalInfo</h3>
+              {/* <img
               src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
               className="object-cover w-72 h-72 rounded-xl"
-            />
-            <p>
-              My name is Abigail, I'm from Argentina and I have 1 year of experience as a full stack
-              developer with a front end orientation.
-              <br />
-              I really enjoy coding, solving problems and building functional, visually pleasing and
-              above all best practice websites in my code, using various design principles and
-              patterns.
-              <br />I started in the world of programming in high school, programming with C# and
-              C++ and it wasn't until I took an introductory web development course that my
-              curiosity about the world of web development grew. I studied graphic design for a year
-              at the UBA and that gave me UI knowledge to integrate into my career as a full stack
-              developer.
-            </p>
-          </div>
+            /> */}
+              <p>
+                My name is Abigail, I'm from Argentina and I have 1 year of experience as a full
+                stack developer with a front end orientation.
+                <br />
+                I really enjoy coding, solving problems and building functional, visually pleasing
+                and above all best practice websites in my code, using various design principles and
+                patterns.
+                <br />I started in the world of programming in high school, programming with C# and
+                C++ and it wasn't until I took an introductory web development course that my
+                curiosity about the world of web development grew. I studied graphic design for a
+                year at the UBA and that gave me UI knowledge to integrate into my career as a full
+                stack developer.
+              </p>
+            </div>
+          )}
         </main>
       </section>
       <Footer />
