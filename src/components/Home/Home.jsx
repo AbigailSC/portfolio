@@ -28,7 +28,7 @@ export const Home = () => {
         <div className="w-[300px]">
           {projectsReverse.map((project, index) => (
             <div key={index} className="grid w-full h-16">
-              <div className="p-1 rounded-lg shadow-xl bg-slate-800 text-start">
+              <div className="p-1 border rounded-lg shadow-xl border-slate-700 bg-slate-800 text-start ">
                 <h2 className="px-2">Project {index + 1}</h2>
                 <img src={project.img} alt={project.name} />
               </div>

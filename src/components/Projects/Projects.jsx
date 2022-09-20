@@ -38,7 +38,7 @@ export const Projects = () => {
           projects
         </button>
         <div
-          className={`md:block md:pb-0 px-6 md:mt-0 ${
+          className={`md:block md:pb-0 px-6 py-6 border-b border-slate-700 md:mt-0 ${
             projectsDisplay ? "flex flex-col" : "hidden"
           }`}
         >

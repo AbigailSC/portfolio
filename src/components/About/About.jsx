@@ -66,9 +66,16 @@ export const About = () => {
             interests
           </button>
           <div
-            className={`md:block md:pb-0 px-6 md:mt-0 ${interests ? "flex flex-col" : "hidden"}`}
+            className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
+              interests ? "flex flex-col" : "hidden"
+            }`}
           >
-            <p>ADJASPDASKDASPDAKSDPASDKAS ASDKASDPAS </p>
+            <p>
+              I am very interested in learning new things, I really like web design and user
+              interface design, I am constantly learning and updating my knowledge. My goal is to
+              gain experience in the area of Web Development and collaborate with the company I work
+              for in order to provide quality service to potential or current clients.
+            </p>
           </div>
           <button
             className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
@@ -79,9 +86,15 @@ export const About = () => {
             education
           </button>
           <div
-            className={`md:block md:pb-0 px-6 md:mt-0 ${education ? "flex flex-col" : "hidden"}`}
+            className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
+              education ? "flex flex-col" : "hidden"
+            }`}
           >
-            <p>education nasodj adpoas jasod as</p>
+            <p>
+              I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I studied
+              graphic design for a year at the uba and graduated as a computer technician at the
+              technical high school.
+            </p>
           </div>
 
           <button
@@ -93,11 +106,14 @@ export const About = () => {
             hobbies
           </button>
           <div
-            className={`md:block md:pb-0 px-6 md:mt-0 ${
+            className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
               hobbiesDisplay ? "flex flex-col" : "hidden"
             }`}
           >
-            <p>hobbie</p>
+            <p>
+              My hobbies are researching new trends in web design, digital drawing, playing video
+              games, streaming, coding and listening to music.
+            </p>
           </div>
         </div>
 
@@ -109,15 +125,11 @@ export const About = () => {
           professionalInfo
         </button>
         <div
-          className={`md:block md:pb-0 px-6 md:mt-0 ${
+          className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
             profInfoDisplay ? "flex flex-col" : "hidden"
           }`}
         >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dicta iusto aperiam
-            veritatis fugiat repellendus delectus sed esse ex nobis nisi, rerum atque nesciunt, et
-            doloremque reprehenderit veniam incidunt magnam.
-          </p>
+          <p>I currently have no work experience.</p>
         </div>
 
         <button
@@ -128,7 +140,7 @@ export const About = () => {
           tecnologies
         </button>
         <div
-          className={`md:block md:pb-0 py-6 border-b-2 border-slate-700 px-6 md:mt-0 ${
+          className={`md:block md:pb-0 py-6 border-b border-slate-700 px-6 md:mt-0 ${
             tecnologies ? "flex flex-col" : "hidden"
           }`}
         >
@@ -252,19 +264,23 @@ export const About = () => {
             </li>
           </ul>
         </div>
-        <main className="flex flex-col gap-2 px-6 py-8">
+        <main className="flex flex-col gap-8 px-6 py-8">
           <h3 className="text-white">// personalInfo</h3>
+          <img
+            src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
+            className="object-cover w-72 h-72 rounded-xl"
+          />
           <p>
-            My name is Abigail,i'm from Argentina and i have 1 year of experience in full stack
-            development con enfoque en el front end. <br />
-            Disfruto mucho de codear, resolver problemas y construir sitios web funcionales,
-            visualmente agradables y sobre todo con buenas practicas en mi codigo, usando varios
-            principios y patrones de diseño.
-            <br /> Empecé en el mundo de la programacion en la secundaria, viendo c#/c++ y no fue
-            hasta que hice un curso en introducción al desarrollo web en donde crecio mi curiosidad
-            por el mundo del desarrollo web. Estudie durante un año diseño grafico en la UBA y eso
-            me dio conocimientos de UI para integrar en mi desarrollo como Desarrolladora full
-            stack.
+            My name is Abigail, I'm from Argentina and I have 1 year of experience as a full stack
+            developer with a front end orientation.
+            <br />
+            I really enjoy coding, solving problems and building functional, visually pleasing and
+            above all best practice websites in my code, using various design principles and
+            patterns.
+            <br />I started in the world of programming in high school, programming with C# and C++
+            and it wasn't until I took an introductory web development course that my curiosity
+            about the world of web development grew. I studied graphic design for a year at the UBA
+            and that gave me UI knowledge to integrate into my career as a full stack developer.
           </p>
         </main>
       </section>

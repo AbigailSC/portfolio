@@ -47,7 +47,7 @@ export const Contact = () => {
           findMeAlsoIn
         </button>
         <div
-          className={`md:block md:pb-0 py-4 px-6 md:mt-0 ${others ? "flex flex-col" : "hidden"}`}
+          className={`md:block md:pb-0 py-4 border-b border-slate-700 px-6 md:mt-0 ${others ? "flex flex-col" : "hidden"}`}
         >
           <ul className="flex flex-col gap-2">
             <li className="flex items-center gap-2 transition duration-300 ease-in-out cursor-pointer hover:text-white hover:transition-all">

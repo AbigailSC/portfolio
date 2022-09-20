@@ -5,7 +5,7 @@ export const projects = [{
   img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1663364922/Captura_de_pantalla_634_yar4k2.png',
   deployLink: 'https://padelapp.netlify.app/',
   tecnologies: ['React', 'Redux toolkit', 'Chakara UI'],
-  description: 'Desarrolle desde el Front end una aplicación de reserva de turnos para canchas de padel con otros compañeros.'
+  description: 'We developed as a group and from the Front end a shift reservation application for paddle tennis courts.'
 },
 {
   name: 'Api Food',
@@ -14,7 +14,7 @@ export const projects = [{
   img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1662403896/Captura_de_pantalla_587_hjpsi0.png',
   deployLink: 'https://pifood-henry-abigailsc.vercel.app/',
   tecnologies: ['React', 'Redux', 'CSS', 'Express', 'PostgreSQL', 'Sequelize'],
-  description: 'Desarrolle una aplicación de comida saludable que incluía: Búsqueda, ordenamientos y filtrados, etc.'
+  description: 'Develop a healthy food app that includes: Search, health level sorting and filtering, recipe creation, etc.'
 },
 {
   name: 'Weather app',
@@ -23,7 +23,7 @@ export const projects = [{
   img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1661885598/ca2_fgjn7m.png',
   deployLink: 'https://weatherapp-xi-nine.vercel.app/',
   tecnologies: ['React', 'CSS', 'HTML'],
-  description: 'Desarrolle una aplicación de consulta del clima que incluía: Busqueda y consulta detallada de cada ciudad.'
+  description: 'Develop a weather query application that includes: Search by city and detailed query of each city.'
 }]
 
 export const projectsReverse = [{
@@ -33,7 +33,7 @@ export const projectsReverse = [{
   img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1661885598/ca2_fgjn7m.png',
   deployLink: 'https://weatherapp-xi-nine.vercel.app/',
   tecnologies: ['React', 'CSS', 'HTML'],
-  description: 'Desarrolle una aplicación de consulta del clima por ciudad que incluía: Busqueda por nombre y consulta detallada de cada ciudad.'
+  description: 'Develop a weather query application that includes: Search by city and detailed query of each city.'
 },
 {
   name: 'Api Food',
@@ -42,7 +42,7 @@ export const projectsReverse = [{
   img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1662403896/Captura_de_pantalla_587_hjpsi0.png',
   deployLink: 'https://pifood-henry-abigailsc.vercel.app/',
   tecnologies: ['React', 'Redux', 'CSS', 'Express', 'PostgreSQL', 'Sequelize'],
-  description: 'Desarrolle una aplicación de comida saludable que incluía: Búsqueda, ordenamientos y filtrados, etc.'
+  description: 'Develop a healthy food app that includes: Search, health level sorting and filtering, recipe creation, etc.'
 },
 {
   name: 'Padel App',
@@ -51,5 +51,5 @@ export const projectsReverse = [{
   img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1663364922/Captura_de_pantalla_634_yar4k2.png',
   deployLink: 'https://padelapp.netlify.app/',
   tecnologies: ['React', 'Redux toolkit', 'Chakara UI'],
-  description: 'Desarrollar la aplicación desde el Front end usando React, Redux toolkit, Chakra UI'
+  description: 'We developed as a group and from the Front end a shift reservation application for paddle tennis courts.'
 }]
