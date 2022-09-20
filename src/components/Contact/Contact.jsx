@@ -4,12 +4,13 @@ import { Navbar } from "../Navbar/Navbar";
 import { RiArrowRightSFill, RiArrowDownSFill } from "react-icons/ri";
 import { ContactForm } from "../ContactForm/ContactForm";
 import { FiExternalLink } from "react-icons/fi";
+import { Footer } from "../Footer/Footer";
 
 export const Contact = () => {
   const [contacts, setContacs] = useState(false);
   const [others, setOthers] = useState(false);
   return (
-    <div className="h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
         <h2 className="p-5 text-white">_contact</h2>
@@ -57,6 +58,7 @@ export const Contact = () => {
         </div>
         <ContactForm />
       </section>
+      <Footer />
     </div>
   );
 };

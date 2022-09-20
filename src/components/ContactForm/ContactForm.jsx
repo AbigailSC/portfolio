@@ -1,15 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactForm = () => {
   const validateEmail =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   const [input, setInput] = useState({
     email: "",
-    subject: "",
+    name: "",
     message: "",
   });
   const [errors, setError] = useState({});
+  const [sendMail, setSendMail] = useState(false);
   const validate = (input) => {
     const errors = {};
     if (!input.email) {
@@ -17,10 +19,10 @@ export const ContactForm = () => {
     } else if (!validateEmail.test(input.email)) {
       errors.email = "Email invalid";
     }
-    if (!input.subject) {
-      errors.subject = "Required subject";
-    } else if (input.subject.length < 10) {
-      errors.subject = "The subject is too short";
+    if (!input.name) {
+      errors.name = "Required name";
+    } else if (input.name.length < 5) {
+      errors.name = "The name is too short";
     }
     if (!input.message) {
       errors.message = "Message required";
@@ -44,54 +46,65 @@ export const ContactForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("ya ta x2");
+    emailjs
+      .sendForm("service_dlnl8p4", "template_t8rb60q", e.target, "vVnC6bOSYIGZqaDAQ")
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
+    setSendMail(true);
   };
   return (
     <div className="flex flex-col px-6 pt-10">
-      <form className="flex flex-col items-start gap-6" onSubmit={(e) => handleSubmit(e)}>
-        <label className="flex flex-col w-full gap-2">
-          <span>_email:</span>
-          <input
-            type="text"
-            name="email"
-            value={input.email}
-            onChange={(e) => handleChange(e)}
-            className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
-              errors.email ? "border-red-500" : null
-            }`}
-          />
-          {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
-        </label>
-        <label className="flex flex-col w-full gap-2">
-          <span>_subject:</span>
-          <input
-            type="text"
-            name="subject"
-            value={input.subject}
-            onChange={(e) => handleChange(e)}
-            className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
-              errors.email ? "border-red-500" : null
-            }`}
-          />
-          {errors.subject && <p className="text-sm text-red-500">{errors.subject}</p>}
-        </label>
-        <label className="flex flex-col w-full gap-2">
-          <span>_message:</span>
-          <textarea
-            type="text"
-            name="message"
-            value={input.message}
-            onChange={(e) => handleChange(e)}
-            className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
-              errors.email ? "border-red-500" : null
-            }`}
-          />
-          {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
-        </label>
-        <button className="px-4 py-3 text-white bg-slate-800 rounded-xl" type="submit">
-          submitMessage
-        </button>
-      </form>
+      {sendMail === false ? (
+        <form className="flex flex-col items-start gap-6" onSubmit={(e) => handleSubmit(e)}>
+          <label className="flex flex-col w-full gap-2">
+            <span>_email:</span>
+            <input
+              type="text"
+              name="email"
+              value={input.email}
+              onChange={(e) => handleChange(e)}
+              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
+                errors.email ? "border-red-500" : null
+              }`}
+            />
+            {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+          </label>
+          <label className="flex flex-col w-full gap-2">
+            <span>_name:</span>
+            <input
+              type="text"
+              name="name"
+              value={input.name}
+              onChange={(e) => handleChange(e)}
+              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
+                errors.name ? "border-red-500" : null
+              }`}
+            />
+            {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
+          </label>
+          <label className="flex flex-col w-full gap-2">
+            <span>_message:</span>
+            <textarea
+              type="text"
+              name="message"
+              value={input.message}
+              onChange={(e) => handleChange(e)}
+              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
+                errors.message ? "border-red-500" : null
+              }`}
+            />
+            {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
+          </label>
+          <button className="px-4 py-3 text-white bg-slate-800 rounded-xl" type="submit">
+            submitMessage
+          </button>
+        </form>
+      ) : (
+        <div className="flex flex-col px-10 text-center h-[400px] justify-center gap-10">
+          <h3 className="text-2xl font-bold text-white">Thank you! 🤟</h3>
+          <p>Your message has been accepted. you will recieve answer really soon!</p>
+        </div>
+      )}
     </div>
   );
 };

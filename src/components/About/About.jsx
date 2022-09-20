@@ -42,7 +42,7 @@ export const About = () => {
   const [hobbiesDisplay, setHobbiesDisplay] = useState(false);
 
   return (
-    <div className="h-full bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between h-full bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
         <h2 className="p-5 text-white">_aboutMe</h2>
@@ -263,7 +263,8 @@ export const About = () => {
             <br /> Empecé en el mundo de la programacion en la secundaria, viendo c#/c++ y no fue
             hasta que hice un curso en introducción al desarrollo web en donde crecio mi curiosidad
             por el mundo del desarrollo web. Estudie durante un año diseño grafico en la UBA y eso
-            me dio conocimientos de UI.
+            me dio conocimientos de UI para integrar en mi desarrollo como Desarrolladora full
+            stack.
           </p>
         </main>
       </section>

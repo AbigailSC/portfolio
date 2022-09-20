@@ -1,10 +1,11 @@
 import React from "react";
+import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import { projectsReverse } from "../utils/dataProjects.js";
 
 export const Home = () => {
   return (
-    <div className="h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col justify-center items-center text-center gap-10 leading-10 h-[90%] lg:flex-row lg:text-left">
         <div className="flex flex-col gap-20 mx-20">
@@ -35,6 +36,7 @@ export const Home = () => {
           ))}
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

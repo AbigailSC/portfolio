@@ -5,6 +5,7 @@ import { projects } from "../utils/dataProjects.js";
 import { filterTecnologiesFunc } from "../utils/filterTecnologies.js";
 import { RiArrowRightSFill, RiArrowDownSFill } from "react-icons/ri";
 import { SiReact, SiRedux, SiTypescript, SiHtml5, SiCss3 } from "react-icons/si";
+import { Footer } from "../Footer/Footer";
 
 export const Projects = () => {
   const [projectsDisplay, setProjectsDisplay] = useState(false);
@@ -25,7 +26,7 @@ export const Projects = () => {
     }
   };
   return (
-    <div className="h-full bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between h-full bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col gap-1 pt-20 text-xl">
         <h2 className="p-5 text-white">_projects</h2>
@@ -121,6 +122,7 @@ export const Projects = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
