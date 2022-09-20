@@ -26,7 +26,7 @@ export const Projects = () => {
     }
   };
   return (
-    <div className="flex flex-col justify-between h-full bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col gap-1 pt-20 text-xl">
         <h2 className="p-5 text-white">_projects</h2>
@@ -38,7 +38,7 @@ export const Projects = () => {
           projects
         </button>
         <div
-          className={`md:block md:pb-0 px-6 py-6 border-b border-slate-700 md:mt-0 ${
+          className={`px-6 py-6 border-b border-slate-700 ${
             projectsDisplay ? "flex flex-col" : "hidden"
           }`}
         >

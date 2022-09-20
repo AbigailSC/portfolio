@@ -42,7 +42,7 @@ export const About = () => {
   const [hobbiesDisplay, setHobbiesDisplay] = useState(false);
 
   return (
-    <div className="flex flex-col justify-between h-full bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
         <h2 className="p-5 text-white">_aboutMe</h2>
@@ -54,9 +54,7 @@ export const About = () => {
           {personaInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
           personalInfo
         </button>
-        <div
-          className={`md:block md:pb-0 md:mt-0 ${personaInfoDisplay ? "flex flex-col" : "hidden"}`}
-        >
+        <div className={`${personaInfoDisplay ? "flex flex-col" : "hidden"}`}>
           <button
             className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
             onClick={() => setInterests(!interests)}
@@ -65,11 +63,7 @@ export const About = () => {
             <AiFillFolder className="text-red-300" />
             interests
           </button>
-          <div
-            className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
-              interests ? "flex flex-col" : "hidden"
-            }`}
-          >
+          <div className={`py-6 px-6 ${interests ? "flex flex-col" : "hidden"}`}>
             <p>
               I am very interested in learning new things, I really like web design and user
               interface design, I am constantly learning and updating my knowledge. My goal is to
@@ -85,11 +79,7 @@ export const About = () => {
             <AiFillFolder className="text-green-300" />
             education
           </button>
-          <div
-            className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
-              education ? "flex flex-col" : "hidden"
-            }`}
-          >
+          <div className={`py-6 px-6 ${education ? "flex flex-col" : "hidden"}`}>
             <p>
               I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I studied
               graphic design for a year at the uba and graduated as a computer technician at the
@@ -105,11 +95,7 @@ export const About = () => {
             <AiFillFolder className="text-blue-300" />
             hobbies
           </button>
-          <div
-            className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
-              hobbiesDisplay ? "flex flex-col" : "hidden"
-            }`}
-          >
+          <div className={`py-6 px-6 ${hobbiesDisplay ? "flex flex-col" : "hidden"}`}>
             <p>
               My hobbies are researching new trends in web design, digital drawing, playing video
               games, streaming, coding and listening to music.
@@ -124,11 +110,7 @@ export const About = () => {
           {profInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
           professionalInfo
         </button>
-        <div
-          className={`md:block md:pb-0 py-6 px-6 md:mt-0 ${
-            profInfoDisplay ? "flex flex-col" : "hidden"
-          }`}
-        >
+        <div className={`py-6 px-6 ${profInfoDisplay ? "flex flex-col" : "hidden"}`}>
           <p>I currently have no work experience.</p>
         </div>
 
@@ -140,7 +122,7 @@ export const About = () => {
           tecnologies
         </button>
         <div
-          className={`md:block md:pb-0 py-6 border-b border-slate-700 px-6 md:mt-0 ${
+          className={`py-6 border-b border-slate-700 px-6 ${
             tecnologies ? "flex flex-col" : "hidden"
           }`}
         >
@@ -266,22 +248,25 @@ export const About = () => {
         </div>
         <main className="flex flex-col gap-8 px-6 py-8">
           <h3 className="text-white">// personalInfo</h3>
-          <img
-            src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
-            className="object-cover w-72 h-72 rounded-xl"
-          />
-          <p>
-            My name is Abigail, I'm from Argentina and I have 1 year of experience as a full stack
-            developer with a front end orientation.
-            <br />
-            I really enjoy coding, solving problems and building functional, visually pleasing and
-            above all best practice websites in my code, using various design principles and
-            patterns.
-            <br />I started in the world of programming in high school, programming with C# and C++
-            and it wasn't until I took an introductory web development course that my curiosity
-            about the world of web development grew. I studied graphic design for a year at the UBA
-            and that gave me UI knowledge to integrate into my career as a full stack developer.
-          </p>
+          <div className="flex flex-col gap-8 md:flex-row md:items-center">
+            <img
+              src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
+              className="object-cover w-72 h-72 rounded-xl"
+            />
+            <p>
+              My name is Abigail, I'm from Argentina and I have 1 year of experience as a full stack
+              developer with a front end orientation.
+              <br />
+              I really enjoy coding, solving problems and building functional, visually pleasing and
+              above all best practice websites in my code, using various design principles and
+              patterns.
+              <br />I started in the world of programming in high school, programming with C# and
+              C++ and it wasn't until I took an introductory web development course that my
+              curiosity about the world of web development grew. I studied graphic design for a year
+              at the UBA and that gave me UI knowledge to integrate into my career as a full stack
+              developer.
+            </p>
+          </div>
         </main>
       </section>
       <Footer />

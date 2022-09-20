@@ -10,7 +10,7 @@ export const Contact = () => {
   const [contacts, setContacs] = useState(false);
   const [others, setOthers] = useState(false);
   return (
-    <div className="flex flex-col justify-between h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col gap-1 pt-20 text-xl lg:bg-red-900">
         <h2 className="p-5 text-white">_contact</h2>
@@ -21,9 +21,7 @@ export const Contact = () => {
           {contacts ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
           contacts
         </button>
-        <div
-          className={`md:block md:pb-0 py-4 px-6 md:mt-0 ${contacts ? "flex flex-col" : "hidden"}`}
-        >
+        <div className={`py-4 px-6 ${contacts ? "flex flex-col" : "hidden"}`}>
           <ul className="flex flex-col gap-2">
             <li className="flex items-center gap-2 transition duration-300 ease-in-out cursor-pointer hover:text-white hover:transition-all">
               <FiExternalLink />
@@ -47,7 +45,9 @@ export const Contact = () => {
           findMeAlsoIn
         </button>
         <div
-          className={`md:block md:pb-0 py-4 border-b border-slate-700 px-6 md:mt-0 ${others ? "flex flex-col" : "hidden"}`}
+          className={`py-4 border-b border-slate-700 px-6 md:mt-0 ${
+            others ? "flex flex-col" : "hidden"
+          }`}
         >
           <ul className="flex flex-col gap-2">
             <li className="flex items-center gap-2 transition duration-300 ease-in-out cursor-pointer hover:text-white hover:transition-all">
