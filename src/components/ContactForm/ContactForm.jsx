@@ -53,7 +53,7 @@ export const ContactForm = () => {
     setSendMail(true);
   };
   return (
-    <div className="flex flex-col px-6 pt-10">
+    <div className="flex flex-col px-6 pt-10 w-full sm:w-3/5 lg:w-[70%] xl:w-[80%] 2xl:w-[85%]">
       {sendMail === false ? (
         <form className="flex flex-col items-start gap-6" onSubmit={(e) => handleSubmit(e)}>
           <label className="flex flex-col w-full gap-2">
@@ -101,8 +101,10 @@ export const ContactForm = () => {
         </form>
       ) : (
         <div className="flex flex-col px-10 text-center h-[400px] justify-center gap-10">
-          <h3 className="text-2xl font-bold text-white">Thank you! 🤟</h3>
-          <p>Your message has been accepted. you will recieve answer really soon!</p>
+          <h3 className="text-2xl font-bold text-white sm:text-4xl">Thank you! 🤟</h3>
+          <p className="sm:text-xl">
+            Your message has been accepted. you will recieve answer really soon!
+          </p>
         </div>
       )}
     </div>

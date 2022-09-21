@@ -164,8 +164,8 @@ export const About = () => {
       <Navbar />
 
       <section className="flex flex-col w-full pt-20 text-xl lg:flex-row lg:pt-12">
-        <div className="flex flex-col lg:w-[30%] xl:w-[20%] 2xl:w-[15%] gap-1 lg:h-[calc(100vh-106px)] lg:border-r lg:border-slate-700">
-          <h2 className="p-5 text-white">_aboutMe</h2>
+        <div className="flex flex-col lg:w-[30%] xl:w-[20%] 2xl:w-[15%] gap-1 lg:gap-0 lg:h-[calc(100vh-106px)] lg:border-r lg:border-slate-700">
+          <h2 className="p-5 text-white ">_aboutMe</h2>
           <button
             className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
             onClick={() => setPersonalInfoDisplay(!personaInfoDisplay)}
@@ -200,7 +200,9 @@ export const About = () => {
               <AiFillFolder className="text-green-300" />
               education
             </button>
-            <div className={`py-2 pl-12 items-start ${education ? "flex flex-col" : "hidden"}`}>
+            <div
+              className={`py-2 pl-12 gap-1 items-start ${education ? "flex flex-col" : "hidden"}`}
+            >
               <button
                 value="university"
                 onClick={(e) => displayMainInfo(e)}
@@ -275,7 +277,7 @@ export const About = () => {
             tecnologies
           </button>
           <div
-            className={`py-2 pl-12 items-start border-b border-slate-700 lg:border-none px-6 ${
+            className={`py-2 pl-12 items-start gap-1  border-b border-slate-700 lg:border-none px-6 ${
               tecnologies ? "flex flex-col" : "hidden"
             }`}
           >
@@ -305,35 +307,57 @@ export const About = () => {
             </button>
           </div>
         </div>
-        <main className="px-6 py-8 lg:w-[70%] xl:w-[80%] 2xl:w-[85%]">
+        <main className="mb-8 lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
           {interestsDetail ? (
-            <p>
-              I am very interested in learning new things, I really like web design and user
-              interface design, I am constantly learning and updating my knowledge. My goal is to
-              gain experience in the area of Web Development and collaborate with the company I work
-              for in order to provide quality service to potential or current clients.
-            </p>
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Interests</h3>
+              <p className="px-6 lg:py-8">
+                I am very interested in learning new things, I really like web design and user
+                interface design, I am constantly learning and updating my knowledge. My goal is to
+                gain experience in the area of Web Development and collaborate with the company I
+                work for in order to provide quality service to potential or current clients.
+              </p>
+            </div>
           ) : educationSecundaryDetail ? (
-            <p>
-              I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I studied
-              graphic design for a year at the uba and graduated as a computer technician at the
-              technical high school.
-            </p>
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
+                // University
+              </h3>
+              <p className="px-6 lg:py-8">
+                I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I
+                studied graphic design for a year at the uba and graduated as a computer technician
+                at the technical high school.
+              </p>
+            </div>
           ) : educationUniversityDetail ? (
-            <p>university</p>
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Secundary</h3>
+              <p className="px-6 lg:py-8">university</p>
+            </div>
           ) : educationCoursesDetail ? (
-            <p>henry</p>
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Courses</h3>
+              <p className="px-6 lg:py-8">henry</p>
+            </div>
           ) : hobbiesDetail ? (
-            <p>
-              My hobbies are researching new trends in web design, digital drawing, playing video
-              games, streaming, coding and listening to music.
-            </p>
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Hobbies</h3>
+              <p className="px-6 lg:py-8">
+                My hobbies are researching new trends in web design, digital drawing, playing video
+                games, streaming, coding and listening to music.
+              </p>
+            </div>
           ) : professionalExp ? (
-            <p>I currently have no work experience.</p>
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
+                // Experience
+              </h3>
+              <p className="px-6 lg:py-8">I currently have no work experience.</p>
+            </div>
           ) : frontend ? (
-            <div>
-              <h3 className="text-white">// Front end</h3>
-              <ul className="flex flex-col gap-1 my-2">
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Front end</h3>
+              <ul className="flex flex-col gap-1 px-6 lg:py-8">
                 <li className="flex items-center gap-2 group">
                   <SiReact className="group-hover:text-[#61DBFB] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
@@ -391,9 +415,9 @@ export const About = () => {
               </ul>
             </div>
           ) : backend ? (
-            <div>
-              <h3 className="text-white">// Back end</h3>
-              <ul className="flex flex-col gap-1 my-2">
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Back end</h3>
+              <ul className="flex flex-col gap-1 px-6 lg:py-8">
                 <li className="flex items-center gap-2 group">
                   <SiNodedotjs className="group-hover:text-[#68A063] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
@@ -427,9 +451,9 @@ export const About = () => {
               </ul>
             </div>
           ) : others ? (
-            <div>
-              <h3 className="text-white">// Others</h3>
-              <ul className="flex flex-col gap-1 my-2">
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Others</h3>
+              <ul className="flex flex-col gap-1 px-6 lg:py-8">
                 <li className="flex items-center gap-2 group">
                   <SiPostman className="group-hover:text-[#FF6934] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
@@ -452,12 +476,14 @@ export const About = () => {
             </div>
           ) : (
             <div className="flex flex-col gap-1">
-              <h3 className="text-white">// personalInfo</h3>
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
+                // personalInfo
+              </h3>
               {/* <img
                 src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
                 className="object-cover w-72 h-72 rounded-xl"
               /> */}
-              <p>
+              <p className="px-6 lg:py-8">
                 My name is Abigail, I'm from Argentina and I have 1 year of experience as a full
                 stack developer with a front end orientation.
                 <br />
