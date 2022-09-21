@@ -162,146 +162,150 @@ export const About = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
-      <section className="flex flex-col gap-1 pt-20 text-xl ">
-        <h2 className="p-5 text-white">_aboutMe</h2>
 
-        <button
-          className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all"
-          onClick={() => setPersonalInfoDisplay(!personaInfoDisplay)}
-        >
-          {personaInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
-          personalInfo
-        </button>
-        <div className={`${personaInfoDisplay ? "flex flex-col" : "hidden"}`}>
+      <section className="flex flex-col w-full pt-20 text-xl lg:flex-row lg:pt-12">
+        <div className="flex flex-col lg:w-[30%] xl:w-[20%] 2xl:w-[15%] gap-1 lg:h-[calc(100vh-106px)] lg:border-r lg:border-slate-700">
+          <h2 className="p-5 text-white">_aboutMe</h2>
           <button
-            className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
-            onClick={() => setInterests(!interests)}
+            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            onClick={() => setPersonalInfoDisplay(!personaInfoDisplay)}
           >
-            {interests ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
-            <AiFillFolder className="text-red-300" />
-            interests
+            {personaInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
+            personalInfo
           </button>
-          <div className={`py-2 pl-12 items-start ${interests ? "flex flex-col" : "hidden"}`}>
+          <div className={`${personaInfoDisplay ? "flex flex-col" : "hidden"}`}>
             <button
-              value="interests"
-              onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1"
+              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              onClick={() => setInterests(!interests)}
             >
-              <FcDocument />
+              {interests ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
+              <AiFillFolder className="text-red-300" />
               interests
             </button>
-          </div>
-          <button
-            className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
-            onClick={() => setEducation(!education)}
-          >
-            {education ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
-            <AiFillFolder className="text-green-300" />
-            education
-          </button>
-          <div className={`py-2 pl-12 items-start ${education ? "flex flex-col" : "hidden"}`}>
+            <div className={`py-2 pl-12 items-start ${interests ? "flex flex-col" : "hidden"}`}>
+              <button
+                value="interests"
+                onClick={(e) => displayMainInfo(e)}
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              >
+                <FcDocument />
+                interests
+              </button>
+            </div>
             <button
-              value="university"
-              onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1"
+              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              onClick={() => setEducation(!education)}
             >
-              <FcDocument />
-              university
+              {education ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
+              <AiFillFolder className="text-green-300" />
+              education
             </button>
-            <button
-              value="secundary"
-              onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1"
-            >
-              <FcDocument />
-              secundary
-            </button>
-            <button
-              value="courses"
-              onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1"
-            >
-              <FcDocument />
-              courses
-            </button>
-          </div>
+            <div className={`py-2 pl-12 items-start ${education ? "flex flex-col" : "hidden"}`}>
+              <button
+                value="university"
+                onClick={(e) => displayMainInfo(e)}
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              >
+                <FcDocument />
+                university
+              </button>
+              <button
+                value="secundary"
+                onClick={(e) => displayMainInfo(e)}
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              >
+                <FcDocument />
+                secundary
+              </button>
+              <button
+                value="courses"
+                onClick={(e) => displayMainInfo(e)}
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              >
+                <FcDocument />
+                courses
+              </button>
+            </div>
 
-          <button
-            className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
-            onClick={() => setHobbiesDisplay(!hobbiesDisplay)}
-          >
-            {hobbiesDisplay ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
-            <AiFillFolder className="text-blue-300" />
-            hobbies
-          </button>
-          <div className={`py-2 pl-12 items-start ${hobbiesDisplay ? "flex flex-col" : "hidden"}`}>
             <button
-              value="hobbies"
-              onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1"
+              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              onClick={() => setHobbiesDisplay(!hobbiesDisplay)}
             >
-              <FcDocument />
+              {hobbiesDisplay ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
+              <AiFillFolder className="text-blue-300" />
               hobbies
             </button>
+            <div
+              className={`py-2 pl-12 items-start ${hobbiesDisplay ? "flex flex-col" : "hidden"}`}
+            >
+              <button
+                value="hobbies"
+                onClick={(e) => displayMainInfo(e)}
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              >
+                <FcDocument />
+                hobbies
+              </button>
+            </div>
+          </div>
+
+          <button
+            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            onClick={() => setProfInfoDisplay(!profInfoDisplay)}
+          >
+            {profInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
+            professionalInfo
+          </button>
+          <div className={`py-2 pl-12 items-start ${profInfoDisplay ? "flex flex-col" : "hidden"}`}>
+            <button
+              value="professionalExperience"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+            >
+              <FcDocument />
+              experience
+            </button>
+          </div>
+
+          <button
+            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            onClick={() => setTecnologies(!tecnologies)}
+          >
+            {tecnologies ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
+            tecnologies
+          </button>
+          <div
+            className={`py-2 pl-12 items-start border-b border-slate-700 lg:border-none px-6 ${
+              tecnologies ? "flex flex-col" : "hidden"
+            }`}
+          >
+            <button
+              value="frontend"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+            >
+              <FcDocument />
+              frontEnd
+            </button>
+            <button
+              value="backend"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+            >
+              <FcDocument />
+              backEnd
+            </button>
+            <button
+              value="others"
+              onClick={(e) => displayMainInfo(e)}
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+            >
+              <FcDocument />
+              others
+            </button>
           </div>
         </div>
-
-        <button
-          className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all"
-          onClick={() => setProfInfoDisplay(!profInfoDisplay)}
-        >
-          {profInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
-          professionalInfo
-        </button>
-        <div className={`py-2 pl-12 items-start ${profInfoDisplay ? "flex flex-col" : "hidden"}`}>
-          <button
-            value="professionalExperience"
-            onClick={(e) => displayMainInfo(e)}
-            className="flex items-center gap-1"
-          >
-            <FcDocument />
-            professionalExperience
-          </button>
-        </div>
-
-        <button
-          className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all"
-          onClick={() => setTecnologies(!tecnologies)}
-        >
-          {tecnologies ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
-          tecnologies
-        </button>
-        <div
-          className={`py-2 pl-12 items-start border-b border-slate-700 px-6 ${
-            tecnologies ? "flex flex-col" : "hidden"
-          }`}
-        >
-          <button
-            value="frontend"
-            onClick={(e) => displayMainInfo(e)}
-            className="flex items-center gap-1"
-          >
-            <FcDocument />
-            frontEnd
-          </button>
-          <button
-            value="backend"
-            onClick={(e) => displayMainInfo(e)}
-            className="flex items-center gap-1"
-          >
-            <FcDocument />
-            backEnd
-          </button>
-          <button
-            value="others"
-            onClick={(e) => displayMainInfo(e)}
-            className="flex items-center gap-1"
-          >
-            <FcDocument />
-            others
-          </button>
-        </div>
-        <main className="px-6 py-8">
+        <main className="px-6 py-8 lg:w-[70%] xl:w-[80%] 2xl:w-[85%]">
           {interestsDetail ? (
             <p>
               I am very interested in learning new things, I really like web design and user
@@ -450,9 +454,9 @@ export const About = () => {
             <div className="flex flex-col gap-1">
               <h3 className="text-white">// personalInfo</h3>
               {/* <img
-              src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
-              className="object-cover w-72 h-72 rounded-xl"
-            /> */}
+                src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
+                className="object-cover w-72 h-72 rounded-xl"
+              /> */}
               <p>
                 My name is Abigail, I'm from Argentina and I have 1 year of experience as a full
                 stack developer with a front end orientation.
@@ -470,6 +474,7 @@ export const About = () => {
           )}
         </main>
       </section>
+
       <Footer />
     </div>
   );

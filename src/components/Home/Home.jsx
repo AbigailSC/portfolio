@@ -8,7 +8,7 @@ export const Home = () => {
     <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col justify-center pt-10 md:pt-20 lg:pt-52 items-center text-center gap-10 leading-10 h-[90%] lg:flex-row lg:text-left">
-        <div className="flex flex-col gap-20 pt-20 mx-20">
+        <div className="flex flex-col gap-20 pt-20">
           <div className="flex flex-col gap-2">
             <h2 className="text-xl xl:text-2xl">Hi all! I am</h2>
             <h1 className="text-6xl xl:text-7xl">Abigail Sarzuri</h1>
@@ -25,7 +25,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-[300px]">
+        <div className="w-[300px] lg:w-[400px]">
           {projectsReverse.map((project, index) => (
             <div key={index} className="grid w-full h-16">
               <div className="p-1 border rounded-lg shadow-xl border-slate-700 bg-slate-800 text-start ">
