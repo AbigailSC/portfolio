@@ -309,35 +309,93 @@ export const About = () => {
         </div>
         <main className="mb-8 lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
           {interestsDetail ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Interests</h3>
-              <p className="px-6 lg:py-8">
+              <p className="px-6 lg:py-8 lg:hidden">
                 I am very interested in learning new things, I really like web design and user
                 interface design, I am constantly learning and updating my knowledge. My goal is to
                 gain experience in the area of Web Development and collaborate with the company I
                 work for in order to provide quality service to potential or current clients.
               </p>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <p className="max-w-2xl pl-4">
+                    I am very interested in learning new things, I really like web design and user
+                    interface design, I am constantly learning and updating my knowledge. My goal is
+                    to gain experience in the area of Web Development and collaborate with the
+                    company I work for in order to provide quality service to potential or current
+                    clients.
+                  </p>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           ) : educationSecundaryDetail ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Secondary</h3>
+              <p className="px-6 lg:py-8 lg:hidden">Dolores Lavalle Technical School</p>
+              <p className="px-6 lg:py-8 lg:hidden">Graphic design</p>
+              <p className="px-6 lg:py-8 lg:hidden">2019 - 2020</p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I did the cbc of the career for more than a year in which I acquired various
+                knowledge that expanded my creativity and gave me tools to complement front end
+                development
+              </p>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <p className="max-w-2xl pl-4">Dolores Lavalle Technical School</p>
+                  <p className="max-w-2xl pl-4">Computer technician</p>
+                  <p className="max-w-2xl pl-4">2012 - 2018</p>
+                  <p className="max-w-2xl pl-4">
+                    I did the cbc of the career for more than a year in which I acquired various
+                    knowledge that expanded my creativity and gave me tools to complement front end
+                    development
+                  </p>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
+            </div>
+          ) : educationUniversityDetail ? (
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
                 // University
               </h3>
+              <p className="px-6 lg:py-8 lg:hidden">University of Buenos aires (UBA)</p>
+              <p className="px-6 lg:py-8 lg:hidden">Graphic design</p>
+              <p className="px-6 lg:py-8 lg:hidden">2019 - 2020</p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I did the cbc of the career for more than a year in which I acquired various
+                knowledge that expanded my creativity and gave me tools to complement front end
+                development
+              </p>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <p className="max-w-2xl pl-4">University of Buenos aires (UBA)</p>
+                  <p className="max-w-2xl pl-4">Graphic design</p>
+                  <p className="max-w-2xl pl-4">2019 - 2020</p>
+                  <p className="max-w-2xl pl-4">
+                    I did the cbc of the career for more than a year in which I acquired various
+                    knowledge that expanded my creativity and gave me tools to complement front end
+                    development
+                  </p>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
+            </div>
+          ) : educationCoursesDetail ? (
+            <div className="flex flex-col gap-1">
+              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Courses</h3>
               <p className="px-6 lg:py-8">
                 I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I
                 studied graphic design for a year at the uba and graduated as a computer technician
                 at the technical high school.
               </p>
-            </div>
-          ) : educationUniversityDetail ? (
-            <div className="flex flex-col gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Secundary</h3>
-              <p className="px-6 lg:py-8">university</p>
-            </div>
-          ) : educationCoursesDetail ? (
-            <div className="flex flex-col gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Courses</h3>
-              <p className="px-6 lg:py-8">henry</p>
             </div>
           ) : hobbiesDetail ? (
             <div className="flex flex-col gap-1">
