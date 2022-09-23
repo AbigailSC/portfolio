@@ -336,24 +336,24 @@ export const About = () => {
             <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Secondary</h3>
               <p className="px-6 lg:py-8 lg:hidden">Dolores Lavalle Technical School</p>
-              <p className="px-6 lg:py-8 lg:hidden">Graphic design</p>
-              <p className="px-6 lg:py-8 lg:hidden">2019 - 2020</p>
+              <p className="px-6 lg:py-8 lg:hidden">Computer technician</p>
+              <p className="px-6 lg:py-8 lg:hidden">2012 - 2018</p>
               <p className="px-6 lg:py-8 lg:hidden">
-                I did the cbc of the career for more than a year in which I acquired various
-                knowledge that expanded my creativity and gave me tools to complement front end
-                development
+                Acquiring solid knowledge about analytical thinking and object-oriented programming
+                foundations, I also learned several languages, including C++, C# and MySQL that gave
+                me the foundation for my career as a fullstack developer
               </p>
               <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5 6 7 8 9</span>
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10</span>
                 <div className="px-6 lg:flex lg:flex-col">
                   <p>{"{/*"}</p>
                   <p className="max-w-2xl pl-4">Dolores Lavalle Technical School</p>
                   <p className="max-w-2xl pl-4">Computer technician</p>
                   <p className="max-w-2xl pl-4">2012 - 2018</p>
                   <p className="max-w-2xl pl-4">
-                    I did the cbc of the career for more than a year in which I acquired various
-                    knowledge that expanded my creativity and gave me tools to complement front end
-                    development
+                    Acquiring solid knowledge about analytical thinking and object-oriented
+                    programming foundations, I also learned several languages, including C++, C# and
+                    MySQL that gave me the foundation for my career as a fullstack developer
                   </p>
                   <p>{"*/}"}</p>
                 </div>
@@ -389,21 +389,98 @@ export const About = () => {
               </div>
             </div>
           ) : educationCoursesDetail ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Courses</h3>
-              <p className="px-6 lg:py-8">
-                I finished my studies as a Full Stack developer at Bootcamp Henry on 09/22. I
-                studied graphic design for a year at the uba and graduated as a computer technician
-                at the technical high school.
+              <p className="px-6 lg:py-8 lg:hidden">Bootcamp Henry</p>
+              <p className="px-6 lg:py-8 lg:hidden">Fullsatck Developer</p>
+              <p className="px-6 lg:py-8 lg:hidden">March - September (2022)</p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I took the henry bootcamp course which gave me the tools to be able to develop a web
+                page both from the front end and from the backend, it also gave me knowledge and
+                experience working as a team.
               </p>
+              <p className="px-6 lg:py-8 lg:hidden">Aprendé programando</p>
+              <p className="px-6 lg:py-8 lg:hidden">Web development</p>
+              <p className="px-6 lg:py-8 lg:hidden">April - September(2016)</p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I took a course that gave me the knowledge of HTML, CSS and some bases of
+                javascript.
+              </p>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11 12 13 14</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <p className="max-w-2xl pl-4">Bootcamp Henry</p>
+                  <p className="max-w-2xl pl-4">Fullsatck Developer</p>
+                  <p className="max-w-2xl pl-4">March - September (2022)</p>
+                  <p className="max-w-2xl pl-4">
+                    I took the henry bootcamp course which gave me the tools to be able to develop a
+                    web page both from the front end and from the backend, it also gave me knowledge
+                    and experience working as a team.
+                  </p>
+                  <p className="max-w-2xl pl-4">Aprendé programando</p>
+                  <p className="max-w-2xl pl-4">Web development</p>
+                  <p className="max-w-2xl pl-4">April - September (2016)</p>
+                  <p className="max-w-2xl pl-4">
+                    I took a course that gave me the knowledge of HTML, CSS and some bases of
+                    javascript.
+                  </p>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           ) : hobbiesDetail ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Hobbies</h3>
-              <p className="px-6 lg:py-8">
-                My hobbies are researching new trends in web design, digital drawing, playing video
-                games, streaming, coding and listening to music.
+              <p className="px-6 lg:py-8 lg:hidden">
+                In my free time I really like to work on small projects to develop my skills in the
+                front end, I also look for new trends in web development.
               </p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I really like drawing on paper or digitally, I really like creating characters and
+                everything my creativity imagines
+              </p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I also really like playing video games with friends or with people I meet in said
+                games, there is always someone to meet!
+              </p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                With the latter comes another of my hobbies, which is streaming, it can be while
+                playing or drawing, it is something that I really enjoy doing since I always meet
+                someone new and I really enjoy talking to new people.
+              </p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                Last but not least, sometimes I like to just relax and listen to music, especially
+                if it's with a cup of tea.
+              </p>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <p className="max-w-2xl pl-4">
+                    In my free time I really like to work on small projects to develop my skills in
+                    the front end, I also look for new trends in web development.
+                  </p>
+                  <p className="max-w-2xl pl-4">
+                    I really like drawing on paper or digitally, I really like creating characters
+                    and everything my creativity imagines
+                  </p>
+                  <p className="max-w-2xl pl-4">
+                    I also really like playing video games with friends or with people I meet in
+                    said games, there is always someone to meet!
+                  </p>
+                  <p className="max-w-2xl pl-4">
+                    With the latter comes another of my hobbies, which is streaming, it can be while
+                    playing or drawing, it is something that I really enjoy doing since I always
+                    meet someone new and I really enjoy talking to new people.
+                  </p>
+                  <p className="max-w-2xl pl-4">
+                    Last but not least, sometimes I like to just relax and listen to music,
+                    especially if it's with a cup of tea.
+                  </p>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           ) : professionalExp ? (
             <div className="flex flex-col gap-1">
