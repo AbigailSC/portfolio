@@ -4,7 +4,7 @@ export const projects = [{
   date: ['Agosto 2022', 'Agosto 2022'],
   img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1663364922/Captura_de_pantalla_634_yar4k2.png',
   deployLink: 'https://padelapp.netlify.app/',
-  tecnologies: ['React', 'Redux toolkit', 'Chakara UI'],
+  tecnologies: ['React', 'Redux toolkit', 'Chakra UI'],
   description: 'We developed as a group and from the Front end a shift reservation application for paddle tennis courts.'
 },
 {

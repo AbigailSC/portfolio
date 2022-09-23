@@ -5,7 +5,7 @@ export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   return (
     <nav
-      className={`bg-gray-900 w-full fixed lg:flex border-b border-slate-700 ${
+      className={`bg-gray-900 w-full z-10 fixed lg:flex border-b border-slate-700 ${
         navbar ? "h-screen sm:h-auto sm:border-b-1" : null
       }`}
     >

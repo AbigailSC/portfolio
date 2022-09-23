@@ -122,6 +122,7 @@ export const Projects = () => {
                 index={index}
                 description={project.description}
                 deployLink={project.deployLink}
+                tecnologies={project.tecnologies}
               />
             ))}
           </div>
