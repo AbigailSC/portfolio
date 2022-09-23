@@ -2,6 +2,7 @@ import React from "react";
 import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import { projectsReverse } from "../utils/dataProjects.js";
+import { HiDownload } from "react-icons/hi";
 
 export const Home = () => {
   return (
@@ -14,15 +15,17 @@ export const Home = () => {
             <h1 className="text-6xl xl:text-7xl">Abigail Sarzuri</h1>
             <h2 className="text-xl text-rose-700 xl:text-2xl">Full stack Developer</h2>
           </div>
-          <div className="flex flex-col gap-2">
-            <h2 className="text-xl text-slate-500">//write the code below to continue:</h2>
-            <div className="flex items-center self-center gap-2 lg:self-start">
-              <h3 className="text-3xl text-blue-600 xl:text-4xl">{">"}</h3>
-              <input
-                className="w-24 text-3xl text-blue-600 bg-slate-900 focus:outline-none xl:text-4xl xl:w-28"
-                placeholder="start"
-              />
-            </div>
+          <div className="flex flex-col gap-4">
+            <h2 className="text-xl text-slate-500">//download my CV:</h2>
+            <button className="flex shadow-xl justify-center self-center max-w-[200px] px-4 py-3 text-lg text-white rounded-xl lg:self-start bg-slate-800">
+              <a
+                href="../../../public/AbigailSarzuri_CV.pdf"
+                download
+                className="flex items-center self-center gap-2"
+              >
+                Download <HiDownload />
+              </a>
+            </button>
           </div>
         </div>
         <div className="w-[300px] lg:w-[400px] mb-48 ">

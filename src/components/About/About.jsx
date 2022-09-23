@@ -483,16 +483,50 @@ export const About = () => {
               </div>
             </div>
           ) : professionalExp ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
                 // Experience
               </h3>
-              <p className="px-6 lg:py-8">I currently have no work experience.</p>
+              <p className="px-6 lg:py-8 lg:hidden">Digital Illustrator</p>
+              <p className="px-6 lg:py-8 lg:hidden">Freelance</p>
+              <p className="px-6 lg:py-8 lg:hidden">2020 - 2021</p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I worked for a year creating and designing illustrations on demand with various
+                clients.
+              </p>
+              <p className="px-6 lg:py-8 lg:hidden">Cashier</p>
+              <p className="px-6 lg:py-8 lg:hidden">Supermarket</p>
+              <p className="px-6 lg:py-8 lg:hidden">2021 - 2022</p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                Work organizing and ordering merchandise, helping customers with their questions and
+                dealing with their complaints.
+              </p>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11 12 13</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <p className="max-w-2xl pl-4">Digital Illustrator</p>
+                  <p className="max-w-2xl pl-4">Freelance</p>
+                  <p className="max-w-2xl pl-4">2020 - 2021</p>
+                  <p className="max-w-2xl pl-4">
+                    I worked for a year creating and designing illustrations on demand with various
+                    clients.
+                  </p>
+                  <p className="max-w-2xl pl-4">Cashier</p>
+                  <p className="max-w-2xl pl-4">Supermarket</p>
+                  <p className="max-w-2xl pl-4">2021 - 2022</p>
+                  <p className="max-w-2xl pl-4">
+                    Work organizing and ordering merchandise, helping customers with their questions
+                    and dealing with their complaints.
+                  </p>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           ) : frontend ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Front end</h3>
-              <ul className="flex flex-col gap-1 px-6 lg:py-8">
+              <ul className="flex flex-col gap-1 px-6 lg:hidden">
                 <li className="flex items-center gap-2 group">
                   <SiReact className="group-hover:text-[#61DBFB] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
@@ -548,11 +582,74 @@ export const About = () => {
                   </p>
                 </li>
               </ul>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <ul className="max-w-2xl pl-4">
+                    <li className="flex items-center gap-2 group">
+                      <SiReact className="group-hover:text-[#61DBFB] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        React
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiTypescript className="group-hover:text-[#2d79c7] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Typescript
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiRedux className="group-hover:text-[#764ABC] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Redux & Redux Toolkit
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiJavascript className="group-hover:text-[#F7E018] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Javascript
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiHtml5 className="group-hover:text-[#F16524] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        HTML
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiCss3 className="group-hover:text-[#2EA3D5] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        CSS
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiChakraui className="group-hover:text-[#2DBFB4] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Chakra UI
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiTailwindcss className="group-hover:text-[#01B7D6] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Tailwind CSS
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiStyledcomponents className="group-hover:text-[#DD6F93] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Styled components
+                      </p>
+                    </li>
+                  </ul>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           ) : backend ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Back end</h3>
-              <ul className="flex flex-col gap-1 px-6 lg:py-8">
+              <ul className="flex flex-col gap-1 px-6 lg:hidden">
                 <li className="flex items-center gap-2 group">
                   <SiNodedotjs className="group-hover:text-[#68A063] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
@@ -584,11 +681,50 @@ export const About = () => {
                   </p>
                 </li>
               </ul>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <ul className="max-w-2xl pl-4">
+                    <li className="flex items-center gap-2 group">
+                      <SiNodedotjs className="group-hover:text-[#68A063] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        NodeJs
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiExpress className="group-hover:text-[#F7E018] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Express
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiMongodb className="group-hover:text-[#09934E] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Mongoose & MongoDB
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiSequelize className="group-hover:text-[#2879BD] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Sequelize
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiPostgresql className="group-hover:text-[#2F6792] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        PostgreSQL
+                      </p>
+                    </li>
+                  </ul>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           ) : others ? (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Others</h3>
-              <ul className="flex flex-col gap-1 px-6 lg:py-8">
+              <ul className="flex flex-col gap-1 px-6 lg:hidden">
                 <li className="flex items-center gap-2 group">
                   <SiPostman className="group-hover:text-[#FF6934] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
@@ -608,29 +744,82 @@ export const About = () => {
                   </p>
                 </li>
               </ul>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <ul className="max-w-2xl pl-4">
+                    <li className="flex items-center gap-2 group">
+                      <SiPostman className="group-hover:text-[#FF6934] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Postman
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiFigma className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Figma
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiAdobephotoshop className="group-hover:text-[#2DA9FF] transition duration-300 ease-in-out group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Adobe photoshop
+                      </p>
+                    </li>
+                  </ul>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           ) : (
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
-                // personalInfo
+                // Personal Info
               </h3>
               {/* <img
                 src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"
                 className="object-cover w-72 h-72 rounded-xl"
               /> */}
-              <p className="px-6 lg:py-8">
+              <p className="px-6 lg:py-8 lg:hidden">
                 My name is Abigail, I'm from Argentina and I have 1 year of experience as a full
                 stack developer with a front end orientation.
-                <br />
+              </p>
+              <p className="px-6 lg:py-8 lg:hidden">
                 I really enjoy coding, solving problems and building functional, visually pleasing
                 and above all best practice websites in my code, using various design principles and
                 patterns.
-                <br />I started in the world of programming in high school, programming with C# and
-                C++ and it wasn't until I took an introductory web development course that my
-                curiosity about the world of web development grew. I studied graphic design for a
-                year at the UBA and that gave me UI knowledge to integrate into my career as a full
-                stack developer.
               </p>
+              <p className="px-6 lg:py-8 lg:hidden">
+                I started in the world of programming in high school, programming with C# and C++
+                and it wasn't until I took an introductory web development course that my curiosity
+                about the world of web development grew. I studied graphic design for a year at the
+                UBA and that gave me UI knowledge to integrate into my career as a full stack
+                developer.
+              </p>
+              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
+                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16</span>
+                <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p>
+                  <p className="max-w-2xl pl-4">
+                    My name is Abigail, I'm from Argentina and I have 1 year of experience as a full
+                    stack developer with a front end orientation.
+                  </p>
+                  <p className="max-w-2xl pl-4">
+                    I really enjoy coding, solving problems and building functional, visually
+                    pleasing and above all best practice websites in my code, using various design
+                    principles and patterns.
+                  </p>
+                  <p className="max-w-2xl pl-4">
+                    I started in the world of programming in high school, programming with C# and
+                    C++ and it wasn't until I took an introductory web development course that my
+                    curiosity about the world of web development grew. I studied graphic design for
+                    a year at the UBA and that gave me UI knowledge to integrate into my career as a
+                    full stack developer.
+                  </p>
+                  <p>{"*/}"}</p>
+                </div>
+              </div>
             </div>
           )}
         </main>
