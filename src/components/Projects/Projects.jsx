@@ -9,20 +9,10 @@ import { Footer } from "../Footer/Footer";
 
 export const Projects = () => {
   const [projectsDisplay, setProjectsDisplay] = useState(false);
-  const [tecnologies, setTecnologies] = useState({
-    names: [],
-  });
+  const [tecnologies, setTecnologies] = useState("All");
   const handleChecked = (e) => {
     if (e.target.checked === true) {
-      setTecnologies({
-        ...tecnologies,
-        names: [...tecnologies.names, e.target.name],
-      });
-    } else {
-      setTecnologies({
-        ...tecnologies,
-        names: tecnologies.names.filter((elem) => elem !== e.target.name),
-      });
+      setTecnologies(e.target.id);
     }
   };
   return (
@@ -108,23 +98,47 @@ export const Projects = () => {
                 CSS
               </span>
             </label>
+            <label className="flex items-center group">
+              <input
+                type="radio"
+                id="All"
+                name="lenguage"
+                onChange={(e) => handleChecked(e)}
+                className="w-4 h-4 mr-4 leading-tight bg-gray-100 border-gray-300 accent-rose-700 focus:none"
+              />
+              <span className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                All tecnologies
+              </span>
+            </label>
           </div>
         </div>
 
         <main className="mb-8 lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
           <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// All Projects</h3>
           <div className="flex flex-col items-center gap-1 px-6 lg:py-8 xl:flex-row xl:flex-wrap xl:justify-center">
-            {projects.map((project, index) => (
-              <Project
-                key={index}
-                name={project.name}
-                img={project.img}
-                index={index}
-                description={project.description}
-                deployLink={project.deployLink}
-                tecnologies={project.tecnologies}
-              />
-            ))}
+            {projects.map((project, index) =>
+              project.tecnologies.includes(tecnologies) ? (
+                <Project
+                  key={index}
+                  name={project.name}
+                  img={project.img}
+                  index={index}
+                  description={project.description}
+                  deployLink={project.deployLink}
+                  tecnologies={project.tecnologies}
+                />
+              ) : tecnologies === "All" ? (
+                <Project
+                  key={index}
+                  name={project.name}
+                  img={project.img}
+                  index={index}
+                  description={project.description}
+                  deployLink={project.deployLink}
+                  tecnologies={project.tecnologies}
+                />
+              ) : null
+            )}
           </div>
         </main>
       </section>

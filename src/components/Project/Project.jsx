@@ -24,8 +24,11 @@ export const Project = ({ name, img, index, description, deployLink, tecnologies
         <div className="flex flex-col justify-center gap-5 p-8">
           <p className="text-sm">{description}</p>
           <ul className="flex flex-wrap gap-2">
-            {tecnologies.map((tecnology) => (
-              <li className="px-2 py-1 text-sm leading-none text-center text-white list-outside rounded bg-rose-700 whitespace-nowrap list">
+            {tecnologies.map((tecnology, index) => (
+              <li
+                key={index}
+                className="px-2 py-1 text-sm leading-none text-center text-white list-outside rounded bg-rose-700 whitespace-nowrap list"
+              >
                 {tecnology}
               </li>
             ))}
