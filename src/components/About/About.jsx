@@ -21,6 +21,7 @@ import {
   SiPostman,
   SiSequelize,
   SiTypescript,
+  SiGithub,
 } from "react-icons/si";
 import { FcDocument } from "react-icons/fc";
 import { Footer } from "../Footer/Footer";
@@ -738,6 +739,12 @@ export const About = () => {
                   </p>
                 </li>
                 <li className="flex items-center gap-2 group">
+                  <SiGithub className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
+                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                    Git & Git hub
+                  </p>
+                </li>
+                <li className="flex items-center gap-2 group">
                   <SiAdobephotoshop className="group-hover:text-[#2DA9FF] transition duration-300 ease-in-out group-hover:transition-all" />
                   <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
                     Adobe photoshop
@@ -759,6 +766,12 @@ export const About = () => {
                       <SiFigma className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
                       <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
                         Figma
+                      </p>
+                    </li>
+                    <li className="flex items-center gap-2 group">
+                      <SiGithub className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
+                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
+                        Git & Git hub
                       </p>
                     </li>
                     <li className="flex items-center gap-2 group">

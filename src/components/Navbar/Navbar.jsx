@@ -48,22 +48,22 @@ export const Navbar = () => {
           <div className={`md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
             <ul className="items-center justify-center space-y-8 md:flex md:space-y-0">
               <Link to="/" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-t border-b border-slate-700 md:border-r md:text-sm md:border-b-0 md:border-t-0">
+                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-t border-b border-slate-700 md:border-r md:text-sm md:border-b-0 md:border-t-0 hover:transition-all hover:text-white">
                   _hello
                 </li>
               </Link>
               <Link to="/aboutMe" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
+                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-white">
                   _aboutMe
                 </li>
               </Link>
               <Link to="/projects" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
+                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-white">
                   _projects
                 </li>
               </Link>
               <Link to="/contact" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0">
+                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-white">
                   _contact
                 </li>
               </Link>

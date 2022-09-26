@@ -14,9 +14,9 @@ export const Project = ({ name, img, index, description, deployLink, tecnologies
             <img
               src={img}
               alt={`block image project ${index}`}
-              className="object-center w-full h-80"
+              className="object-fill w-full h-80"
             />
-            <div className="absolute w-full h-full transition duration-300 ease-in-out top-0 hover:bg-[rgba(51,65,85,0.7)] opacity-0 hover:opacity-100 ">
+            <div className="absolute w-full h-full transition duration-300 ease-in-out top-0 group hover:bg-[rgba(51,65,85,0.7)] opacity-0 hover:opacity-100 ">
               <p className="w-full h-full text-center text-white mt-28">View project</p>
             </div>
           </a>
