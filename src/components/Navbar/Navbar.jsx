@@ -11,7 +11,7 @@ export const Navbar = () => {
     >
       <div className="justify-start mx-auto lg:max-w-7xl md:items-center md:flex md:mx-0 xl:max-w-full">
         <div className="flex items-center justify-end py-3 md:py-5 md:block">
-          <div className="md:hidden">
+          <div className="flex justify-between w-full md:hidden">
             <button
               className="px-4 py-2 outline-none text-slate-700 focus:text-white"
               onClick={() => setNavbar(!navbar)}

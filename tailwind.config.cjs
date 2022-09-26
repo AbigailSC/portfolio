@@ -7,5 +7,6 @@ module.exports = {
       'RobotoMono': ['Roboto Mono', 'sans-serif']
     }
   },
+  darkMode: 'class',
   plugins: [],
 }
