@@ -3,21 +3,31 @@ import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
 import { projectsReverse } from "../utils/dataProjects.js";
 import { HiDownload } from "react-icons/hi";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 export const Home = () => {
+  const [text, count] = useTypewriter({
+    words: ["Fullstack Developer", "Frontend Developer", "Backend Developer"],
+    loop: 0,
+    typeSpeed: 70,
+    deleteSpeed: 20,
+    delaySpeed: 4000,
+  });
   return (
-    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between w-full h-full min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col justify-center md:pt-20 lg:pt-60 items-center text-center gap-10 leading-10 h-[90%] lg:flex-row lg:text-left xl:pt-72 xl:gap-36">
         <div className="flex flex-col gap-20 pt-20 lg:pt-0">
           <div className="flex flex-col gap-2">
             <h2 className="text-xl xl:text-2xl">Hi all! I am</h2>
             <h1 className="text-6xl xl:text-7xl">Abigail Sarzuri</h1>
-            <h2 className="text-xl text-rose-700 xl:text-2xl">Full stack Developer</h2>
+            <h2 className="text-xl text-rose-700 xl:text-2xl">
+              {text} <Cursor />
+            </h2>
           </div>
           <div className="flex flex-col gap-4">
             <h2 className="text-xl text-slate-500">//download my CV:</h2>
-            <button className="flex shadow-xl justify-center self-center max-w-[200px] px-4 py-3 text-lg text-white rounded-xl lg:self-start bg-slate-800">
+            <button className="flex shadow-xl justify-center self-center max-w-[200px] px-4 py-3 text-lg rounded-xl lg:self-start bg-slate-800 transition duration-300 ease-in-out hover:transition-all hover:bg-slate-700 hover:text-white">
               <a
                 href="../../../public/AbigailSarzuri_CV.pdf"
                 download
