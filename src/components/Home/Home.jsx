@@ -4,6 +4,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { projectsReverse } from "../utils/dataProjects.js";
 import { HiDownload } from "react-icons/hi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import CV from "../../assets/AbigailSarzuri_CV.pdf";
 
 export const Home = () => {
   const [text, count] = useTypewriter({
@@ -28,11 +29,7 @@ export const Home = () => {
           <div className="flex flex-col gap-4">
             <h2 className="text-xl text-slate-500">//download my CV:</h2>
             <button className="flex shadow-xl justify-center self-center max-w-[200px] px-4 py-3 text-lg rounded-xl lg:self-start bg-slate-800 transition duration-300 ease-in-out hover:transition-all hover:bg-slate-700 hover:text-white">
-              <a
-                href="../../../public/AbigailSarzuri_CV.pdf"
-                download
-                className="flex items-center self-center gap-2"
-              >
+              <a href={CV} download={CV} className="flex items-center self-center gap-2">
                 Download <HiDownload />
               </a>
             </button>
