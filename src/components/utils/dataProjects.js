@@ -24,7 +24,17 @@ export const projects = [{
   deployLink: 'https://weatherapp-xi-nine.vercel.app/',
   tecnologies: ['React', 'CSS', 'HTML'],
   description: 'Develop a weather query application that includes: Search by city and detailed query of each city.'
-}]
+},
+{
+  name: 'MusiMarket',
+  rol: 'Front end Developer',
+  date: ['Sep 2022', 'Actualidad'],
+  img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1664319490/Captura_de_pantalla_659_cctxta.png',
+  deployLink: 'https://musimarket.vercel.app/',
+  tecnologies: ['CSS', 'HTML'],
+  description: 'Develop a weather query application that includes: Search by city and detailed query of each city.'
+}
+]
 
 export const projectsReverse = [{
   name: 'Weather app',
