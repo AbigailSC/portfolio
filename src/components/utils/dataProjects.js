@@ -1,5 +1,15 @@
 export const projects = [
   {
+    name: 'MoviesApp',
+    rol: 'Front end Developer',
+    date: ['Oct 2022', 'Nov 2022'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1667401505/Captura_de_pantalla_695_htnhpn.png',
+    deployLink: 'https://movies-app-abigailsc.vercel.app/',
+    tecnologies: ['React', 'Redux toolkit', "TailwindCss"],
+    id: 5,
+    description: 'Application to view information on the latest movies on the billboard. It has pagination, responsive design and dark mode'
+  },
+  {
     name: 'GamesBA',
     rol: 'Front end Developer',
     date: ['Oct 2022', 'Oct 2022'],
@@ -101,5 +111,15 @@ export const projectsReverse = [
     tecnologies: ['CSS', 'HTML'],
     id: 4,
     description: 'Landing page develop in HTML and CSS about a e-commerce about videogames'
-  }
+  },
+  {
+    name: 'MoviesApp',
+    rol: 'Front end Developer',
+    date: ['Oct 2022', 'Nov 2022'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1667401505/Captura_de_pantalla_695_htnhpn.png',
+    deployLink: 'https://movies-app-abigailsc.vercel.app/',
+    tecnologies: ['React', 'Redux toolkit', "TailwindCss"],
+    id: 5,
+    description: 'Application to view information on the latest movies on the billboard. It has pagination, responsive design and dark mode'
+  },
 ]
