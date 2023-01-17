@@ -1,5 +1,15 @@
 export const projects = [
   {
+    name: 'Musitracker',
+    rol: 'Fullstack Developer',
+    date: ['Oct 2022', 'Enero 2023'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1673828943/Captura_de_pantalla_789_pbybhy.png',
+    deployLink: 'https://musitracker-client.vercel.app/',
+    tecnologies: ['React', 'Redux toolkit', "Typescript", "Styled Components", "Express", "MongoDB"],
+    id: 6,
+    description: 'Application to listen and view information of music (Api Deezer) and log users in MongoDB. Only medium and large screens'
+  },
+  {
     name: 'MoviesApp',
     rol: 'Front end Developer',
     date: ['Oct 2022', 'Nov 2022'],
@@ -121,5 +131,15 @@ export const projectsReverse = [
     tecnologies: ['React', 'Redux toolkit', "TailwindCss"],
     id: 5,
     description: 'Application to view information on the latest movies on the billboard. It has pagination, responsive design and dark mode'
+  },
+  {
+    name: 'Musitracker',
+    rol: 'Fullstack Developer',
+    date: ['Oct 2022', 'Enero 2023'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1673828943/Captura_de_pantalla_789_pbybhy.png',
+    deployLink: 'https://musitracker-client.vercel.app/',
+    tecnologies: ['React', 'Redux toolkit', "Typescript", "Styled Components", "Express", "Mongoose", "MongoDB"],
+    id: 6,
+    description: 'Application to listen and view information of music (Api Deezer) and log users in MongoDB. Only medium and large screens'
   },
 ]
