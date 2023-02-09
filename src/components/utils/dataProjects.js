@@ -1,11 +1,21 @@
 export const projects = [
   {
+    name: 'Piano App',
+    rol: 'Frontend Developer',
+    date: ['Febrero 20232', 'Febrero 2023'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1675909943/pianoapp_pfweif.png',
+    deployLink: 'https://piano-angular-lyart.vercel.app/',
+    tecnologies: ["Angular", "Typescript", "CSS", "HTML"],
+    id: 7,
+    description: 'Piano application to play piano with keyboard, only medium and large screens'
+  },
+  {
     name: 'Musitracker',
     rol: 'Fullstack Developer',
     date: ['Oct 2022', 'Enero 2023'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1673828943/Captura_de_pantalla_789_pbybhy.png',
     deployLink: 'https://musitracker-client.vercel.app/',
-    tecnologies: ['React', 'Redux toolkit', "Typescript", "Styled Components", "Express", "MongoDB"],
+    tecnologies: ['React', 'Redux', "Typescript", "Styled Components", "Express", "MongoDB"],
     id: 6,
     description: 'Application to listen and view information of music (Api Deezer) and log users in MongoDB. Only medium and large screens'
   },
@@ -15,17 +25,17 @@ export const projects = [
     date: ['Oct 2022', 'Nov 2022'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1667401505/Captura_de_pantalla_695_htnhpn.png',
     deployLink: 'https://movies-app-abigailsc.vercel.app/',
-    tecnologies: ['React', 'Redux toolkit', "TailwindCss"],
+    tecnologies: ['React', 'Redux', "TailwindCss"],
     id: 5,
     description: 'Application to view information on the latest movies on the billboard. It has pagination, responsive design and dark mode'
   },
   {
     name: 'GamesBA',
     rol: 'Front end Developer',
-    date: ['Oct 2022', 'Oct 2022'],
+    date: ['Oct 2022', 'Enero 2023'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1667055548/Captura_de_pantalla_690_b6ivy0.png',
     deployLink: 'https://gamesba.vercel.app/',
-    tecnologies: ['CSS', 'HTML'],
+    tecnologies: ['CSS', 'HTML', 'JavaScript'],
     id: 4,
     description: 'Landing page develop in HTML and CSS about a e-commerce about videogames'
   },
@@ -45,7 +55,7 @@ export const projects = [
     date: ['Agosto 2022', 'Agosto 2022'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1663364922/Captura_de_pantalla_634_yar4k2.png',
     deployLink: 'https://padelapp.netlify.app/',
-    tecnologies: ['React', 'Redux toolkit', 'Chakra UI'],
+    tecnologies: ['React', 'Redux', 'Chakra UI'],
     id: 2,
     description: 'We developed as a group and from the Front end a shift reservation application for paddle tennis courts.'
   },
@@ -98,7 +108,7 @@ export const projectsReverse = [
     date: ['Agosto 2022', 'Agosto 2022'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1663364922/Captura_de_pantalla_634_yar4k2.png',
     deployLink: 'https://padelapp.netlify.app/',
-    tecnologies: ['React', 'Redux toolkit', 'Chakara UI'],
+    tecnologies: ['React', 'Redux', 'Chakara UI'],
     id: 2,
     description: 'We developed as a group and from the Front end a shift reservation application for paddle tennis courts.'
   },
@@ -115,10 +125,10 @@ export const projectsReverse = [
   {
     name: 'GamesBA',
     rol: 'Front end Developer',
-    date: ['Oct 2022', 'Oct 2022'],
+    date: ['Oct 2022', 'Enero 2023'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1667055548/Captura_de_pantalla_690_b6ivy0.png',
     deployLink: 'https://gamesba.vercel.app/',
-    tecnologies: ['CSS', 'HTML'],
+    tecnologies: ['CSS', 'HTML', 'JavaScript'],
     id: 4,
     description: 'Landing page develop in HTML and CSS about a e-commerce about videogames'
   },
@@ -128,7 +138,7 @@ export const projectsReverse = [
     date: ['Oct 2022', 'Nov 2022'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1667401505/Captura_de_pantalla_695_htnhpn.png',
     deployLink: 'https://movies-app-abigailsc.vercel.app/',
-    tecnologies: ['React', 'Redux toolkit', "TailwindCss"],
+    tecnologies: ['React', 'Redux', "TailwindCss"],
     id: 5,
     description: 'Application to view information on the latest movies on the billboard. It has pagination, responsive design and dark mode'
   },
@@ -138,8 +148,18 @@ export const projectsReverse = [
     date: ['Oct 2022', 'Enero 2023'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1673828943/Captura_de_pantalla_789_pbybhy.png',
     deployLink: 'https://musitracker-client.vercel.app/',
-    tecnologies: ['React', 'Redux toolkit', "Typescript", "Styled Components", "Express", "Mongoose", "MongoDB"],
+    tecnologies: ['React', 'Redux', "Typescript", "Styled Components", "Express", "Mongoose", "MongoDB"],
     id: 6,
     description: 'Application to listen and view information of music (Api Deezer) and log users in MongoDB. Only medium and large screens'
+  },
+  {
+    name: 'Piano App',
+    rol: 'Frontend Developer',
+    date: ['Febrero 20232', 'Febrero 2023'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1675909943/pianoapp_pfweif.png',
+    deployLink: 'https://piano-angular-lyart.vercel.app/',
+    tecnologies: ['Angular", "Typescript", "CSS'],
+    id: 7,
+    description: 'Piano application to play piano with keyboard, only medium and large screens'
   },
 ]
