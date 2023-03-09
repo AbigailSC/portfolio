@@ -11,7 +11,9 @@ export const ContactForm = () => {
     message: "",
   });
   const [errors, setError] = useState({});
+  console.log("🚀 ~ file: ContactForm.jsx:14 ~ ContactForm ~ errors:", errors);
   const [sendMail, setSendMail] = useState(false);
+
   const validate = (input) => {
     const errors = {};
     if (!input.email) {
@@ -51,6 +53,18 @@ export const ContactForm = () => {
       .then((res) => console.log(res))
       .catch((error) => console.log(error));
     setSendMail(true);
+  };
+  const handleError = () => {
+    if (
+      input.email === "" ||
+      input.message === "" ||
+      input.name === "" ||
+      Object.keys(errors).length > 0
+    ) {
+      return true;
+    } else {
+      return false;
+    }
   };
   return (
     <div className="flex flex-col px-6 pt-10 w-full sm:w-3/5 lg:w-[70%] xl:w-[60%] 2xl:w-[50%]">
@@ -95,7 +109,11 @@ export const ContactForm = () => {
             />
             {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
           </label>
-          <button className="px-4 py-3 text-white bg-slate-800 rounded-xl" type="submit">
+          <button
+            className="px-4 py-3 text-white bg-slate-800 rounded-xl"
+            type="submit"
+            disabled={handleError()}
+          >
             submitMessage
           </button>
         </form>
@@ -103,7 +121,7 @@ export const ContactForm = () => {
         <div className="flex flex-col px-10 text-center h-[400px] justify-center gap-10">
           <h3 className="text-2xl font-bold text-white sm:text-4xl">Thank you! 🤟</h3>
           <p className="sm:text-xl">
-            Your message has been accepted. you will recieve answer really soon!
+            Your message has been accepted. you will receive answer really soon!
           </p>
         </div>
       )}
