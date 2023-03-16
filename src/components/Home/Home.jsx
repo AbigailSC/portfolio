@@ -4,7 +4,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { projectsReverse } from "../utils/dataProjects.js";
 import { HiDownload } from "react-icons/hi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import CV from "../../assets/AbigailSarzuri_CV.pdf";
+import CV from "../../assets/AbigailSarzuri.pdf";
 
 export const Home = () => {
   const [text, count] = useTypewriter({
