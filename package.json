@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build && echo 'abigailsc.dev' > ./dist/CNAME",
+    "predeploy": "npm run build && echo abigailsc.dev > ./dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
