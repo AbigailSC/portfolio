@@ -22,8 +22,11 @@ import {
   SiSequelize,
   SiTypescript,
   SiGithub,
+  SiSass,
+  SiSwagger,
+  SiJsonwebtokens,
 } from "react-icons/si";
-import { FcDocument } from "react-icons/fc";
+import { AiFillFileMarkdown } from "react-icons/ai";
 import { Footer } from "../Footer/Footer";
 
 export const About = () => {
@@ -161,14 +164,13 @@ export const About = () => {
   const [others, setOthers] = useState(false);
 
   return (
-    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r text-slate-400 font-RobotoMono">
       <Navbar />
-
-      <section className="flex flex-col w-full pt-20 text-xl lg:flex-row lg:pt-12">
-        <div className="flex flex-col lg:w-[30%] xl:w-[20%] 2xl:w-[15%] gap-1 lg:gap-0 lg:h-[calc(100vh-106px)] lg:border-r lg:border-slate-700">
-          <h2 className="p-5 text-white ">_aboutMe</h2>
+      <section className="flex flex-col w-full pt-20 text-xl lg:flex-row lg:pt-[48px]">
+        <div className="lg:fixed flex flex-col lg:w-[430px] lg:gap-0 lg:h-[calc(100vh-106px)] lg:border-r lg:border-[rgba(255,255,255,0.1)]">
+          <h2 className="p-5 text-gray-200">.AboutMe</h2>
           <button
-            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            className="border-y border-[rgba(255,255,255,0.1)] flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all lg:bg-inherit lg:border-y lg:border-[rgba(255,255,255,0.1)] focus:bg-gray-800 focus:bg-opacity-50"
             onClick={() => setPersonalInfoDisplay(!personaInfoDisplay)}
           >
             {personaInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
@@ -176,10 +178,10 @@ export const About = () => {
           </button>
           <div className={`${personaInfoDisplay ? "flex flex-col" : "hidden"}`}>
             <button
-              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               onClick={() => setInterests(!interests)}
             >
-              {interests ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
+              {interests ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
               <AiFillFolder className="text-red-300" />
               interests
             </button>
@@ -187,17 +189,17 @@ export const About = () => {
               <button
                 value="interests"
                 onClick={(e) => displayMainInfo(e)}
-                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               >
-                <FcDocument />
-                interests
+                <AiFillFileMarkdown />
+                interests.md
               </button>
             </div>
             <button
-              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               onClick={() => setEducation(!education)}
             >
-              {education ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
+              {education ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
               <AiFillFolder className="text-green-300" />
               education
             </button>
@@ -207,34 +209,34 @@ export const About = () => {
               <button
                 value="university"
                 onClick={(e) => displayMainInfo(e)}
-                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               >
-                <FcDocument />
-                university
+                <AiFillFileMarkdown />
+                university.md
               </button>
               <button
                 value="secundary"
                 onClick={(e) => displayMainInfo(e)}
-                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               >
-                <FcDocument />
-                secundary
+                <AiFillFileMarkdown />
+                highSchool.md
               </button>
               <button
                 value="courses"
                 onClick={(e) => displayMainInfo(e)}
-                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               >
-                <FcDocument />
-                courses
+                <AiFillFileMarkdown />
+                courses.md
               </button>
             </div>
 
             <button
-              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               onClick={() => setHobbiesDisplay(!hobbiesDisplay)}
             >
-              {hobbiesDisplay ? <MdKeyboardArrowRight /> : <MdKeyboardArrowDown />}
+              {hobbiesDisplay ? <MdKeyboardArrowDown /> : <MdKeyboardArrowRight />}
               <AiFillFolder className="text-blue-300" />
               hobbies
             </button>
@@ -244,16 +246,16 @@ export const About = () => {
               <button
                 value="hobbies"
                 onClick={(e) => displayMainInfo(e)}
-                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               >
-                <FcDocument />
-                hobbies
+                <AiFillFileMarkdown />
+                hobbies.md
               </button>
             </div>
           </div>
 
           <button
-            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            className="border-y  border-[rgba(255,255,255,0.1)] flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all lg:bg-inherit lg:border-y lg:border-[rgba(255,255,255,0.1)] focus:bg-gray-800 focus:bg-opacity-50"
             onClick={() => setProfInfoDisplay(!profInfoDisplay)}
           >
             {profInfoDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
@@ -263,55 +265,56 @@ export const About = () => {
             <button
               value="professionalExperience"
               onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
             >
-              <FcDocument />
-              experience
+              <AiFillFileMarkdown />
+              experience.md
             </button>
           </div>
-
           <button
-            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            className="border-y border-[rgba(255,255,255,0.1)] flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all lg:bg-inherit lg:border-y lg:border-[rgba(255,255,255,0.1)] focus:bg-gray-800 focus:bg-opacity-50"
             onClick={() => setTecnologies(!tecnologies)}
           >
             {tecnologies ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
             tecnologies
           </button>
           <div
-            className={`py-2 pl-12 items-start gap-1  border-b border-slate-700 lg:border-none px-6 ${
+            className={`pt-2 pb-6 pl-12 items-start gap-1  lg:border-none px-6 ${
               tecnologies ? "flex flex-col" : "hidden"
             }`}
           >
             <button
               value="frontend"
               onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
             >
-              <FcDocument />
-              frontEnd
+              <AiFillFileMarkdown />
+              frontEnd.md
             </button>
             <button
               value="backend"
               onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
             >
-              <FcDocument />
-              backEnd
+              <AiFillFileMarkdown />
+              backEnd.md
             </button>
             <button
               value="others"
               onClick={(e) => displayMainInfo(e)}
-              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-white hover:transition-all"
+              className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
             >
-              <FcDocument />
-              others
+              <AiFillFileMarkdown />
+              others.md
             </button>
           </div>
         </div>
-        <main className="mb-8 lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
+        <main className="lg:ml-[430px] mb-8 md:h-min lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
           {interestsDetail ? (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Interests</h3>
+              <h3 className="px-5 py-5 text-slate-400  lg:border-b lg:border-[rgba(255,255,255,0.1)]">
+                //Interests
+              </h3>
               <p className="px-6 lg:py-8 lg:hidden">
                 I am very interested in learning new things, I really like web design and user
                 interface design, I am constantly learning and updating my knowledge. My goal is to
@@ -335,7 +338,9 @@ export const About = () => {
             </div>
           ) : educationSecundaryDetail ? (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Secondary</h3>
+              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
+                //High School
+              </h3>
               <p className="px-6 lg:py-8 lg:hidden">Dolores Lavalle Technical School</p>
               <p className="px-6 lg:py-8 lg:hidden">Computer technician</p>
               <p className="px-6 lg:py-8 lg:hidden">2012 - 2018</p>
@@ -362,8 +367,8 @@ export const About = () => {
             </div>
           ) : educationUniversityDetail ? (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
-                // University
+              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
+                //University
               </h3>
               <p className="px-6 lg:py-8 lg:hidden">University of Buenos aires (UBA)</p>
               <p className="px-6 lg:py-8 lg:hidden">Graphic design</p>
@@ -391,7 +396,9 @@ export const About = () => {
             </div>
           ) : educationCoursesDetail ? (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Courses</h3>
+              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
+                //Courses
+              </h3>
               <p className="px-6 lg:py-8 lg:hidden">Bootcamp Henry</p>
               <p className="px-6 lg:py-8 lg:hidden">Fullsatck Developer</p>
               <p className="px-6 lg:py-8 lg:hidden">March - September (2022)</p>
@@ -432,7 +439,9 @@ export const About = () => {
             </div>
           ) : hobbiesDetail ? (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Hobbies</h3>
+              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
+                //Hobbies
+              </h3>
               <p className="px-6 lg:py-8 lg:hidden">
                 In my free time I really like to work on small projects to develop my skills in the
                 front end, I also look for new trends in web development.
@@ -485,8 +494,8 @@ export const About = () => {
             </div>
           ) : professionalExp ? (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
-                // Experience
+              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
+                //Experience
               </h3>
               <p className="px-6 lg:py-8 lg:hidden">Digital Illustrator</p>
               <p className="px-6 lg:py-8 lg:hidden">Freelance</p>
@@ -525,162 +534,236 @@ export const About = () => {
               </div>
             </div>
           ) : frontend ? (
-            <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Front end</h3>
-              <ul className="flex flex-col gap-1 px-6 lg:hidden">
-                <li className="flex items-center gap-2 group">
-                  <SiReact className="group-hover:text-[#61DBFB] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    React
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiTypescript className="group-hover:text-[#2d79c7] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Typescript
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiRedux className="group-hover:text-[#764ABC] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Redux & Redux Toolkit
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiJavascript className="group-hover:text-[#F7E018] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Javascript
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiHtml5 className="group-hover:text-[#F16524] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    HTML
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiCss3 className="group-hover:text-[#2EA3D5] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    CSS
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiChakraui className="group-hover:text-[#2DBFB4] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Chakra UI
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiTailwindcss className="group-hover:text-[#01B7D6] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Tailwind CSS
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiStyledcomponents className="group-hover:text-[#DD6F93] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Styled components
-                  </p>
-                </li>
-              </ul>
-              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11</span>
-                <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p>
-                  <ul className="max-w-2xl pl-4">
+            <div className="flex flex-col h-min gap-1 border-t-2 lg:border-t-0 border-[rgba(255,255,255,0.1)]">
+              <h3 className="px-5 py-5 text-slate-400 border-b border-[rgba(255,255,255,0.1)]">
+                //Frontend
+              </h3>
+              <ul className="flex flex-col gap-3 p-6 text-gray-200 md:px-28 lg:hidden">
+                <li className="text-2xl font-bold">✒️Skills</li>
+                <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                <div className="flex flex-col gap-3 px-8 py-2">
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiReact className="group-hover:text-[#61DBFB] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        React
-                      </p>
+                      <SiChakraui className="text-[#2DBFB4]" />
+                      <p className="text-white">Chakra UI</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiTypescript className="group-hover:text-[#2d79c7] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Typescript
-                      </p>
+                      <SiCss3 className="text-[#2EA3D5]" />
+                      <p className="text-white">CSS</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiRedux className="group-hover:text-[#764ABC] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Redux & Redux Toolkit
-                      </p>
+                      <SiHtml5 className="text-[#F16524]" />
+                      <p className="text-white">HTML</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiJavascript className="group-hover:text-[#F7E018] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Javascript
-                      </p>
+                      <SiJavascript className="text-[#F7E018]" />
+                      <p className="text-white">Javascript</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiHtml5 className="group-hover:text-[#F16524] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        HTML
-                      </p>
+                      <SiReact className="text-[#61DBFB]" />
+                      <p className="text-white group-hover:transition-all">React</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiCss3 className="group-hover:text-[#2EA3D5] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        CSS
-                      </p>
+                      <SiRedux className="text-[#764ABC]" />
+                      <p className="text-white">Redux & Redux Toolkit</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiChakraui className="group-hover:text-[#2DBFB4] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Chakra UI
-                      </p>
+                      <SiTailwindcss className="text-[#01B7D6]" />
+                      <p className="text-white">Tailwind CSS</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiTailwindcss className="group-hover:text-[#01B7D6] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Tailwind CSS
-                      </p>
+                      <SiTypescript className="text-[#2d79c7]" />
+                      <p className="text-white">Typescript</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiStyledcomponents className="group-hover:text-[#DD6F93] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Styled components
-                      </p>
+                      <SiSass className="text-[#BF4080]" />
+                      <p className="text-white">Sass</p>
                     </li>
-                  </ul>
-                  <p>{"*/}"}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiStyledcomponents className="text-[#DD6F93]" />
+                      <p className="text-white">Styled components</p>
+                    </li>
+                  </div>
                 </div>
+              </ul>
+              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
+                {/* <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11</span> */}
+                {/* <div className="px-6 lg:flex lg:flex-col">
+                  <p>{"{/*"}</p> */}
+                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                  <li className="text-4xl font-bold">✒️Skills</li>
+                  <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                  <div className="flex flex-col gap-3 px-8 py-2">
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiChakraui className="text-[#2DBFB4]" />
+                        <p className="text-white">Chakra UI</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiCss3 className="text-[#2EA3D5]" />
+                        <p className="text-white">CSS</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiHtml5 className="text-[#F16524]" />
+                        <p className="text-white">HTML</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiJavascript className="text-[#F7E018]" />
+                        <p className="text-white">Javascript</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiReact className="text-[#61DBFB]" />
+                        <p className="text-white group-hover:transition-all">React</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiRedux className="text-[#764ABC]" />
+                        <p className="text-white">Redux & Redux Toolkit</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiTailwindcss className="text-[#01B7D6]" />
+                        <p className="text-white">Tailwind CSS</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiTypescript className="text-[#2d79c7]" />
+                        <p className="text-white">Typescript</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiSass className="text-[#BF4080]" />
+                        <p className="text-white">Sass</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiStyledcomponents className="text-[#DD6F93]" />
+                        <p className="text-white">Styled components</p>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
+                {/* <p>*</p>
+                </div> */}
               </div>
             </div>
           ) : backend ? (
-            <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Back end</h3>
-              <ul className="flex flex-col gap-1 px-6 lg:hidden">
-                <li className="flex items-center gap-2 group">
-                  <SiNodedotjs className="group-hover:text-[#68A063] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    NodeJs
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiExpress className="group-hover:text-[#F7E018] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Express
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiMongodb className="group-hover:text-[#09934E] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Mongoose & MongoDB
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiSequelize className="group-hover:text-[#2879BD] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Sequelize
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiPostgresql className="group-hover:text-[#2F6792] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    PostgreSQL
-                  </p>
-                </li>
+            <div className="flex flex-col h-min gap-1 border-t-2 lg:border-t-0 border-[rgba(255,255,255,0.1)]">
+              <h3 className="px-5 py-5 text-slate-400 border-b border-[rgba(255,255,255,0.1)]">
+                //Backend
+              </h3>
+              <ul className="flex flex-col gap-3 p-6 text-gray-200 md:px-28 lg:hidden">
+                <li className="text-2xl font-bold">💻Skills</li>
+                <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                <div className="flex flex-col gap-3 px-8 py-2">
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiNodedotjs className="text-[#68A063]" />
+                      <p className="text-white">NodeJs</p>
+                    </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiExpress className="text-[#F7E018]" />
+                      <p className="text-white">Express</p>
+                    </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiMongodb className="text-[#09934E]" />
+                      <p className="text-white">MongoDB</p>
+                    </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiMongodb className="text-[#A03333]" />
+                      <p className="text-white">Mongoose</p>
+                    </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiSequelize className="text-[#2879BD]" />
+                      <p className="text-white">Sequelize</p>
+                    </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiPostgresql className="text-[#2F6792]" />
+                      <p className="text-white">PostgreSQL</p>
+                    </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiSwagger className="text-[#85EA2D]" />
+                      <p className="text-white">Swagger</p>
+                    </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiJsonwebtokens className="text-[#D63AFF]" />
+                      <p className="text-white">Json web token</p>
+                    </li>
+                  </div>
+                </div>
               </ul>
               <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
                 <span className="flex w-2">1 2 3 4 5 6 7</span>
@@ -724,7 +807,7 @@ export const About = () => {
             </div>
           ) : others ? (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// Others</h3>
+              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">//Others</h3>
               <ul className="flex flex-col gap-1 px-6 lg:hidden">
                 <li className="flex items-center gap-2 group">
                   <SiPostman className="group-hover:text-[#FF6934] transition duration-300 ease-in-out group-hover:transition-all" />
@@ -787,8 +870,8 @@ export const About = () => {
             </div>
           ) : (
             <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">
-                // Personal Info
+              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
+                //Personal Info
               </h3>
               {/* <img
                 src="https://res.cloudinary.com/dbhb8sohh/image/upload/v1663642291/aaaaa22_oach10.png"

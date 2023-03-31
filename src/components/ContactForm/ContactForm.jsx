@@ -77,7 +77,7 @@ export const ContactForm = () => {
               name="email"
               value={input.email}
               onChange={(e) => handleChange(e)}
-              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
+              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[transparent] focus:outline-none ${
                 errors.email ? "border-red-500" : null
               }`}
             />
@@ -90,7 +90,7 @@ export const ContactForm = () => {
               name="name"
               value={input.name}
               onChange={(e) => handleChange(e)}
-              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
+              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[transparent] focus:outline-none ${
                 errors.name ? "border-red-500" : null
               }`}
             />
@@ -103,14 +103,14 @@ export const ContactForm = () => {
               name="message"
               value={input.message}
               onChange={(e) => handleChange(e)}
-              className={`px-4 py-2 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[#0b1220] focus:outline-none ${
+              className={`px-4 py-4 leading-tight border-2 appearance-none rounded-xl border-slate-700 bg-[transparent] focus:outline-none ${
                 errors.message ? "border-red-500" : null
               }`}
             />
             {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
           </label>
           <button
-            className="px-4 py-3 text-white bg-slate-800 rounded-xl"
+            className="px-4 py-3 text-gray-200 bg-slate-800 rounded-xl"
             type="submit"
             disabled={handleError()}
           >
@@ -119,7 +119,7 @@ export const ContactForm = () => {
         </form>
       ) : (
         <div className="flex flex-col px-10 text-center h-[400px] justify-center gap-10">
-          <h3 className="text-2xl font-bold text-white sm:text-4xl">Thank you! 🤟</h3>
+          <h3 className="text-2xl font-bold text-gray-200 sm:text-4xl">Thank you! 🤟</h3>
           <p className="sm:text-xl">
             Your message has been accepted. you will receive answer really soon!
           </p>

@@ -3,17 +3,28 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [changeBg, setChangeBg] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 20) {
+      setChangeBg(true);
+    } else {
+      setChangeBg(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
+
   return (
     <nav
-      className={`bg-gray-900 w-full z-10 fixed lg:flex border-b border-slate-700 ${
-        navbar ? "h-screen sm:h-auto sm:border-b-1" : null
-      }`}
+      className={`transition-colors w-full z-10 fixed lg:flex border-b border-[rgba(255,255,255,0.1)] lg:h-[48px] ${
+        navbar ? "h-screen sm:h-auto backdrop-filter backdrop-blur-lg sm:border-b-1" : null
+      } ${changeBg ? "backdrop-filter backdrop-blur-lg sm:border-b-1 " : null}`}
     >
       <div className="justify-start mx-auto lg:max-w-7xl md:items-center md:flex md:mx-0 xl:max-w-full">
         <div className="flex items-center justify-end py-3 md:py-5 md:block">
           <div className="flex justify-between w-full md:hidden">
             <button
-              className="px-4 py-2 outline-none text-slate-700 focus:text-white"
+              className="px-4 py-2 outline-none text-slate-700 focus:text-gray-200"
               onClick={() => setNavbar(!navbar)}
             >
               {navbar ? (
@@ -46,25 +57,25 @@ export const Navbar = () => {
         </div>
         <div>
           <div className={`md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
-            <ul className="items-center justify-center space-y-8 md:flex md:space-y-0">
-              <Link to="/" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-t border-b border-slate-700 md:border-r md:text-sm md:border-b-0 md:border-t-0 hover:transition-all hover:text-white">
-                  _hello
+            <ul className="items-start  justify-center space-y-8 h-[48px] md:flex md:space-y-0">
+              <Link to="/" className="focus:text-gray-200">
+                <li className="md:w-[200px] md:px-0 px-8 md:h-[48px] py-4 text-xl font-medium text-center transition duration-300 ease-in-out border-t border-b border-[rgba(255,255,255,0.1)] md:border-r md:text-sm md:border-b-0 md:border-t-0 hover:transition-all hover:text-gray-200">
+                  <span className="text-rose-500">00</span>.Hello
                 </li>
               </Link>
-              <Link to="/aboutMe" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-white">
-                  _aboutMe
+              <Link to="/aboutMe" className="focus:text-gray-200">
+                <li className="md:w-[200px] md:px-0 px-8 md:h-[48px] py-4 text-xl font-medium text-center transition duration-300 ease-in-out border-b border-[rgba(255,255,255,0.1)] md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-gray-200">
+                  <span className="text-rose-500">01</span>.AboutMe
                 </li>
               </Link>
-              <Link to="/projects" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-white">
-                  _projects
+              <Link to="/projects" className="focus:text-gray-200">
+                <li className="md:w-[200px] md:px-0 px-8 md:h-[48px] py-4 text-xl font-medium text-center transition duration-300 ease-in-out border-b border-[rgba(255,255,255,0.1)] md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-gray-200">
+                  <span className="text-rose-500">02</span>.Projects
                 </li>
               </Link>
-              <Link to="/contact" className="focus:text-white">
-                <li className="px-8 py-4 text-xl font-medium text-center transition duration-300 ease-in-out bg-gray-900 border-b border-slate-700 md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-white">
-                  _contact
+              <Link to="/contact" className="focus:text-gray-200">
+                <li className="md:w-[200px] md:px-0 px-8 md:h-[48px] py-4 text-xl font-medium text-center transition duration-300 ease-in-out border-b border-[rgba(255,255,255,0.1)] md:border-r md:text-sm md:border-b-0 hover:transition-all hover:text-gray-200">
+                  <span className="text-rose-500">03</span>.Contact
                 </li>
               </Link>
             </ul>

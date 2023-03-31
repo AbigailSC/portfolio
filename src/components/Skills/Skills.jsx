@@ -14,27 +14,27 @@ export const Skills = () => {
       <img
         src={text}
         alt="Skills.txt"
-        className="cursor-pointer h-32"
+        className="h-32 cursor-pointer"
         onClick={() => handleCloseBtn("block")}
       />
-      <p className="text-xl text-white">Habilidades.txt</p>
+      <p className="text-xl text-gray-200">Habilidades.txt</p>
       <div
         id="moveSkills"
         style={closeBtn === "none" ? { display: "none" } : { display: "block" }}
-        className="fixed bg-stone-300 text-left shadow-lg p-1 w-full font-medium sm:w-7/12  lg:w-6/12 2xl:w-4/12 2xl:h-max "
+        className="fixed w-full p-1 font-medium text-left shadow-lg bg-stone-300 sm:w-7/12 lg:w-6/12 2xl:w-4/12 2xl:h-max "
       >
-        <div className="flex flex-row justify-between bg-gradient-to-r from-blue-800 to-blue-500 p-2">
-          <div className="flex justify-center items-center gap-1">
+        <div className="flex flex-row justify-between p-2 bg-gradient-to-r from-blue-800 to-blue-500">
+          <div className="flex items-center justify-center gap-1">
             <img src={text} className="w-5 h-5" />
             <h1 className="text-stone-100">Habilidades.txt</h1>
           </div>
           <div
             onClick={() => handleCloseBtn("none")}
-            className="bg-stone-300 w-6 h-6 cursor-pointer active:bg-stone-400 flex justify-center items-center"
+            className="flex items-center justify-center w-6 h-6 cursor-pointer bg-stone-300 active:bg-stone-400"
             style={{ border: "2px outset", outline: "none" }}
           >
             <svg
-              className="fill-black w-4 h-4"
+              className="w-4 h-4 fill-black"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >

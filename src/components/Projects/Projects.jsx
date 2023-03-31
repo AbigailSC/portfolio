@@ -16,13 +16,13 @@ export const Projects = () => {
     }
   };
   return (
-    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r bg-slate-900 text-slate-400 font-RobotoMono">
+    <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col w-full pt-20 text-xl lg:flex-row lg:pt-12">
         <div className="flex flex-col lg:w-[30%] xl:w-[20%] 2xl:w-[15%] gap-1 lg:gap-0 lg:min-h-[calc(100vh-106px)] lg:border-r lg:border-slate-700">
-          <h2 className="p-5 text-white">_projects</h2>
+          <h2 className="p-5 text-gray-200">_projects</h2>
           <button
-            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-white hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-gray-200 hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
             onClick={() => setProjectsDisplay(!projectsDisplay)}
           >
             {projectsDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
@@ -114,7 +114,9 @@ export const Projects = () => {
         </div>
 
         <main className="mb-8 lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
-          <h3 className="px-5 py-5 text-white lg:border-b lg:border-slate-700">// All Projects</h3>
+          <h3 className="px-5 py-5 text-gray-200 lg:border-b lg:border-slate-700">
+            // All Projects
+          </h3>
           <div className="flex flex-col items-center gap-1 px-6 lg:py-8 xl:flex-row xl:flex-wrap xl:justify-center">
             {projects.map((project, index) =>
               project.tecnologies.includes(tecnologies) ? (

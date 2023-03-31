@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export const Project = ({ name, img, index, description, deployLink, tecnologies }) => {
   return (
@@ -14,10 +13,10 @@ export const Project = ({ name, img, index, description, deployLink, tecnologies
             <img
               src={img}
               alt={`block image project ${index}`}
-              className="object-fill w-full h-80"
+              className="object-cover w-full h-full"
             />
             <div className="absolute w-full h-full transition duration-300 ease-in-out top-0 group hover:bg-[rgba(51,65,85,0.7)] opacity-0 hover:opacity-100 ">
-              <p className="w-full h-full text-center text-white mt-28">View project</p>
+              <p className="w-full h-full text-center text-gray-200 mt-28">View project</p>
             </div>
           </a>
         </figure>
@@ -27,7 +26,7 @@ export const Project = ({ name, img, index, description, deployLink, tecnologies
             {tecnologies.map((tecnology, index) => (
               <li
                 key={index}
-                className="px-2 py-1 text-sm leading-none text-center text-white list-outside rounded bg-rose-700 whitespace-nowrap list"
+                className="px-2 py-1 text-sm leading-none text-center text-gray-200 list-outside rounded bg-rose-700 whitespace-nowrap list"
               >
                 {tecnology}
               </li>
