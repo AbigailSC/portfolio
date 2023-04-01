@@ -4,13 +4,13 @@ import { Navbar } from "../Navbar/Navbar";
 import { projectsReverse } from "../utils/dataProjects.js";
 import { HiDownload } from "react-icons/hi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import CV from "../../assets/AbigailSarzuri.pdf";
+import CV from "../../assets/CV_Abigail_Sarzuri_Fullstack_Developer.pdf";
 
 export const Home = () => {
   const [text, count] = useTypewriter({
     words: ["Fullstack Developer", "Frontend Developer", "Backend Developer"],
     loop: 0,
-    typeSpeed: 70,
+    typeSpeed: 60,
     deleteSpeed: 20,
     delaySpeed: 4000,
   });

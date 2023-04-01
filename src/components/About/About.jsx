@@ -25,6 +25,7 @@ import {
   SiSass,
   SiSwagger,
   SiJsonwebtokens,
+  SiGit,
 } from "react-icons/si";
 import { AiFillFileMarkdown } from "react-icons/ai";
 import { Footer } from "../Footer/Footer";
@@ -539,7 +540,7 @@ export const About = () => {
                 //Frontend
               </h3>
               <ul className="flex flex-col gap-3 p-6 text-gray-200 md:px-28 lg:hidden">
-                <li className="text-2xl font-bold">✒️Skills</li>
+                <li className="text-2xl font-bold">🎨Skills</li>
                 <span className="border-b border-[rgba(255,255,255,0.1)]" />
                 <div className="flex flex-col gap-3 px-8 py-2">
                   <div className="flex items-center gap-2">
@@ -615,11 +616,8 @@ export const About = () => {
                 </div>
               </ul>
               <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
-                {/* <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11</span> */}
-                {/* <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p> */}
                 <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
-                  <li className="text-4xl font-bold">✒️Skills</li>
+                  <li className="text-4xl font-bold">🎨Skills</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <div className="flex flex-col gap-3 px-8 py-2">
                     <div className="flex items-center gap-2">
@@ -694,8 +692,6 @@ export const About = () => {
                     </div>
                   </div>
                 </ul>
-                {/* <p>*</p>
-                </div> */}
               </div>
             </div>
           ) : backend ? (
@@ -765,107 +761,159 @@ export const About = () => {
                   </div>
                 </div>
               </ul>
-              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5 6 7</span>
-                <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p>
-                  <ul className="max-w-2xl pl-4">
-                    <li className="flex items-center gap-2 group">
-                      <SiNodedotjs className="group-hover:text-[#68A063] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        NodeJs
-                      </p>
-                    </li>
-                    <li className="flex items-center gap-2 group">
-                      <SiExpress className="group-hover:text-[#F7E018] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Express
-                      </p>
-                    </li>
-                    <li className="flex items-center gap-2 group">
-                      <SiMongodb className="group-hover:text-[#09934E] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Mongoose & MongoDB
-                      </p>
-                    </li>
-                    <li className="flex items-center gap-2 group">
-                      <SiSequelize className="group-hover:text-[#2879BD] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Sequelize
-                      </p>
-                    </li>
-                    <li className="flex items-center gap-2 group">
-                      <SiPostgresql className="group-hover:text-[#2F6792] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        PostgreSQL
-                      </p>
-                    </li>
-                  </ul>
-                  <p>{"*/}"}</p>
-                </div>
+              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
+                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                  <li className="text-4xl font-bold">💻Skills</li>
+                  <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                  <div className="flex flex-col gap-3 px-8 py-2">
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiNodedotjs className="text-[#68A063]" />
+                        <p className="text-white">NodeJs</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiExpress className="text-[#F7E018]" />
+                        <p className="text-white">Express</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiMongodb className="text-[#09934E]" />
+                        <p className="text-white">MongoDB</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiMongodb className="text-[#A03333]" />
+                        <p className="text-white">Mongoose</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiSequelize className="text-[#2879BD]" />
+                        <p className="text-white">Sequelize</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiPostgresql className="text-[#2F6792]" />
+                        <p className="text-white">PostgreSQL</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiSwagger className="text-[#85EA2D]" />
+                        <p className="text-white">Swagger</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiJsonwebtokens className="text-[#D63AFF]" />
+                        <p className="text-white">Json web token</p>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
               </div>
             </div>
           ) : others ? (
-            <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">//Others</h3>
-              <ul className="flex flex-col gap-1 px-6 lg:hidden">
-                <li className="flex items-center gap-2 group">
-                  <SiPostman className="group-hover:text-[#FF6934] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Postman
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiFigma className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Figma
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiGithub className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Git & Git hub
-                  </p>
-                </li>
-                <li className="flex items-center gap-2 group">
-                  <SiAdobephotoshop className="group-hover:text-[#2DA9FF] transition duration-300 ease-in-out group-hover:transition-all" />
-                  <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                    Adobe photoshop
-                  </p>
-                </li>
-              </ul>
-              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5</span>
-                <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p>
-                  <ul className="max-w-2xl pl-4">
+            <div className="flex flex-col h-min gap-1 border-t-2 lg:border-t-0 border-[rgba(255,255,255,0.1)]">
+              <h3 className="px-5 py-5 text-slate-400 border-b border-[rgba(255,255,255,0.1)]">
+                //Others
+              </h3>
+              <ul className="flex flex-col gap-3 p-6 text-gray-200 md:px-28 lg:hidden">
+                <li className="text-2xl font-bold">💾Skills</li>
+                <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                <div className="flex flex-col gap-3 px-8 py-2">
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiPostman className="group-hover:text-[#FF6934] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Postman
-                      </p>
+                      <SiPostman className="text-[#FF6934]" />
+                      <p className="text-white">Postman</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiFigma className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Figma
-                      </p>
+                      <SiFigma className="text-white" />
+                      <p className="text-white">Figma</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiGithub className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Git & Git hub
-                      </p>
+                      <SiGit className="text-[#F54D27]" />
+                      <p className="text-white">Git</p>
                     </li>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
                     <li className="flex items-center gap-2 group">
-                      <SiAdobephotoshop className="group-hover:text-[#2DA9FF] transition duration-300 ease-in-out group-hover:transition-all" />
-                      <p className="transition duration-300 ease-in-out group-hover:text-white group-hover:transition-all">
-                        Adobe photoshop
-                      </p>
+                      <SiGithub className="text-white" />
+                      <p className="text-white">Github</p>
                     </li>
-                  </ul>
-                  <p>{"*/}"}</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                    <li className="flex items-center gap-2 group">
+                      <SiAdobephotoshop className="text-[#2DA9FF]" />
+                      <p className="text-white">Adobe photoshop</p>
+                    </li>
+                  </div>
                 </div>
+              </ul>
+              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
+                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                  <li className="text-4xl font-bold">💻Skills</li>
+                  <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                  <div className="flex flex-col gap-3 px-8 py-2">
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiPostman className="text-[#FF6934]" />
+                        <p className="text-white">Postman</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiFigma className="text-white" />
+                        <p className="text-white">Figma</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiGit className="text-[#F54D27]" />
+                        <p className="text-white">Git</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiGithub className="text-white" />
+                        <p className="text-white">Github</p>
+                      </li>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-[5px] h-[5px] bg-gray-200 rounded-full" />
+                      <li className="flex items-center gap-2 group">
+                        <SiAdobephotoshop className="text-[#2DA9FF]" />
+                        <p className="text-white">Adobe photoshop</p>
+                      </li>
+                    </div>
+                  </div>
+                </ul>
               </div>
             </div>
           ) : (
