@@ -11,7 +11,6 @@ export const ContactForm = () => {
     message: "",
   });
   const [errors, setError] = useState({});
-  console.log("🚀 ~ file: ContactForm.jsx:14 ~ ContactForm ~ errors:", errors);
   const [sendMail, setSendMail] = useState(false);
 
   const validate = (input) => {
