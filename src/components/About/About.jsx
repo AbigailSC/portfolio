@@ -3,30 +3,6 @@ import { Navbar } from "../Navbar/Navbar";
 import { RiArrowRightSFill, RiArrowDownSFill } from "react-icons/ri";
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { AiFillFolder } from "react-icons/ai";
-import {
-  SiAdobephotoshop,
-  SiReact,
-  SiRedux,
-  SiJavascript,
-  SiHtml5,
-  SiCss3,
-  SiChakraui,
-  SiTailwindcss,
-  SiStyledcomponents,
-  SiFigma,
-  SiNodedotjs,
-  SiExpress,
-  SiMongodb,
-  SiPostgresql,
-  SiPostman,
-  SiSequelize,
-  SiTypescript,
-  SiGithub,
-  SiSass,
-  SiSwagger,
-  SiJsonwebtokens,
-  SiGit,
-} from "react-icons/si";
 import { AiFillFileMarkdown } from "react-icons/ai";
 import { Footer } from "../Footer/Footer";
 import { backData, frontData, otherData } from "./Data";
@@ -35,17 +11,13 @@ export const About = () => {
   // *Categoria personalInfo
 
   const [personaInfoDisplay, setPersonalInfoDisplay] = useState(false);
-
   const [tecnologies, setTecnologies] = useState(false);
-
   const [profInfoDisplay, setProfInfoDisplay] = useState(false);
 
   // *Subcategorias:
 
   const [interests, setInterests] = useState(false); // *Interests
-
   const [education, setEducation] = useState(false); // *Education
-
   const [hobbiesDisplay, setHobbiesDisplay] = useState(false); // *Hobbies
 
   const displayMainInfo = (e) => {
@@ -57,7 +29,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(false);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(false);
         setInterestDetail(true);
@@ -68,7 +39,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(false);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(true);
         setEducationCoursesDetail(false);
         setInterestDetail(false);
@@ -79,7 +49,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(false);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(true);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(false);
         setInterestDetail(false);
@@ -90,7 +59,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(false);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(true);
         setInterestDetail(false);
@@ -101,7 +69,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(false);
         setHobbiesDetail(true);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(false);
         setInterestDetail(false);
@@ -112,7 +79,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(true);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(false);
         setInterestDetail(false);
@@ -123,7 +89,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(false);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(false);
         setInterestDetail(false);
@@ -134,7 +99,6 @@ export const About = () => {
         setOthers(false);
         setProfessionalExp(false);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(false);
         setInterestDetail(false);
@@ -145,7 +109,6 @@ export const About = () => {
         setOthers(true);
         setProfessionalExp(false);
         setHobbiesDetail(false);
-        setEducationSecundaryDetail(false);
         setEducationUniversityDetail(false);
         setEducationCoursesDetail(false);
         setInterestDetail(false);
@@ -156,7 +119,6 @@ export const About = () => {
   };
 
   const [interestsDetail, setInterestDetail] = useState(false);
-  const [educationSecundaryDetail, setEducationSecundaryDetail] = useState(false);
   const [educationUniversityDetail, setEducationUniversityDetail] = useState(false);
   const [educationCoursesDetail, setEducationCoursesDetail] = useState(false);
   const [hobbiesDetail, setHobbiesDetail] = useState(false);
@@ -214,15 +176,7 @@ export const About = () => {
                 className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               >
                 <AiFillFileMarkdown />
-                university.md
-              </button>
-              <button
-                value="secundary"
-                onClick={(e) => displayMainInfo(e)}
-                className="flex items-center gap-1 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
-              >
-                <AiFillFileMarkdown />
-                highSchool.md
+                studies.md
               </button>
               <button
                 value="courses"
@@ -233,7 +187,6 @@ export const About = () => {
                 courses.md
               </button>
             </div>
-
             <button
               className="flex items-center w-full gap-1 px-6 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all"
               onClick={() => setHobbiesDisplay(!hobbiesDisplay)}
@@ -313,87 +266,158 @@ export const About = () => {
         </div>
         <main className="lg:ml-[430px] mb-8 md:h-min lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%] ">
           {interestsDetail ? (
-            <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-slate-400  lg:border-b lg:border-[rgba(255,255,255,0.1)]">
-                //Interests
+            <div className="flex flex-col h-min border-t-2 lg:border-t-0 border-[rgba(255,255,255,0.1)]">
+              <h3 className="px-5 py-5 text-slate-400 border-b border-[rgba(255,255,255,0.1)]">
+                //interests.md
               </h3>
-              <p className="px-6 lg:py-8 lg:hidden">
-                I am very interested in learning new things, I really like web design and user
-                interface design, I am constantly learning and updating my knowledge. My goal is to
-                gain experience in the area of Web Development and collaborate with the company I
-                work for in order to provide quality service to potential or current clients.
-              </p>
-              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5 6 7 8 9</span>
-                <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p>
-                  <p className="max-w-2xl pl-4">
-                    I am very interested in learning new things, I really like web design and user
-                    interface design, I am constantly learning and updating my knowledge. My goal is
-                    to gain experience in the area of Web Development and collaborate with the
-                    company I work for in order to provide quality service to potential or current
-                    clients.
-                  </p>
-                  <p>{"*/}"}</p>
-                </div>
-              </div>
-            </div>
-          ) : educationSecundaryDetail ? (
-            <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
-                //High School
-              </h3>
-              <p className="px-6 lg:py-8 lg:hidden">Dolores Lavalle Technical School</p>
-              <p className="px-6 lg:py-8 lg:hidden">Computer technician</p>
-              <p className="px-6 lg:py-8 lg:hidden">2012 - 2018</p>
-              <p className="px-6 lg:py-8 lg:hidden">
-                Acquiring solid knowledge about analytical thinking and object-oriented programming
-                foundations, I also learned several languages, including C++, C# and MySQL that gave
-                me the foundation for my career as a fullstack developer
-              </p>
-              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10</span>
-                <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p>
-                  <p className="max-w-2xl pl-4">Dolores Lavalle Technical School</p>
-                  <p className="max-w-2xl pl-4">Computer technician</p>
-                  <p className="max-w-2xl pl-4">2012 - 2018</p>
-                  <p className="max-w-2xl pl-4">
-                    Acquiring solid knowledge about analytical thinking and object-oriented
-                    programming foundations, I also learned several languages, including C++, C# and
-                    MySQL that gave me the foundation for my career as a fullstack developer
-                  </p>
-                  <p>{"*/}"}</p>
-                </div>
+              <ul className="flex flex-col gap-4 p-6 text-gray-200 md:px-28 lg:hidden">
+                <li className="text-2xl font-bold">📌Interests</li>
+                <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                <p className="px-6">
+                  I am a passionate learner with a keen interest in web design and user interface
+                  design. I am always striving to expand my knowledge and skills in these areas in
+                  order to provide the best possible service to clients. My ultimate goal is to gain
+                  more experience in the field of Web Development and collaborate with the company I
+                  work for to deliver high-quality services to potential and current clients.
+                </p>
+                <p className="px-6">
+                  In addition, I am currently expanding my knowledge of Docker, a powerful tool for
+                  containerization and deployment, which has the potential to streamline
+                  infrastructure and optimize development processes. I am excited to apply this
+                  knowledge to future projects and continue to expand my skillset.
+                </p>
+                <p className="px-6">
+                  I am a detail-oriented individual who places a strong emphasis on user-centered
+                  design. I believe that the key to creating effective web applications is to
+                  understand the needs and expectations of the target audience, and to design
+                  interfaces that are intuitive, functional, and aesthetically pleasing.
+                </p>
+                <p className="px-6">
+                  Overall, I am a dedicated and passionate web design and development professional
+                  who is committed to delivering high-quality services to clients. With my strong
+                  foundation in web design and development technologies and my ongoing commitment to
+                  learning and updating my skillset, I am confident that I can make a valuable
+                  contribution to any team.
+                </p>
+              </ul>
+              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-180px)] lg:flex lg:items-center">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
+                  <li className="text-4xl font-bold">📌Interests</li>
+                  <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                  <div className="flex flex-col gap-4 px-12 py-2">
+                    <p>
+                      I am a passionate learner with a keen interest in web design and user
+                      interface design. I am always striving to expand my knowledge and skills in
+                      these areas in order to provide the best possible service to clients. My
+                      ultimate goal is to gain more experience in the field of Web Development and
+                      collaborate with the company I work for to deliver high-quality services to
+                      potential and current clients.
+                    </p>
+                    <p>
+                      In addition, I am currently expanding my knowledge of Docker, a powerful tool
+                      for containerization and deployment, which has the potential to streamline
+                      infrastructure and optimize development processes. I am excited to apply this
+                      knowledge to future projects and continue to expand my skillset.
+                    </p>
+                    <p>
+                      I am a detail-oriented individual who places a strong emphasis on
+                      user-centered design. I believe that the key to creating effective web
+                      applications is to understand the needs and expectations of the target
+                      audience, and to design interfaces that are intuitive, functional, and
+                      aesthetically pleasing.
+                    </p>
+                    <p>
+                      Overall, I am a dedicated and passionate web design and development
+                      professional who is committed to delivering high-quality services to clients.
+                      With my strong foundation in web design and development technologies and my
+                      ongoing commitment to learning and updating my skillset, I am confident that I
+                      can make a valuable contribution to any team.
+                    </p>
+                  </div>
+                </ul>
               </div>
             </div>
           ) : educationUniversityDetail ? (
-            <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
-                //University
+            <div className="flex flex-col h-min border-t-2 lg:border-t-0 border-[rgba(255,255,255,0.1)]">
+              <h3 className="px-5 py-5 text-slate-400 border-b border-[rgba(255,255,255,0.1)]">
+                //studies.md
               </h3>
-              <p className="px-6 lg:py-8 lg:hidden">University of Buenos aires (UBA)</p>
-              <p className="px-6 lg:py-8 lg:hidden">Graphic design</p>
-              <p className="px-6 lg:py-8 lg:hidden">2019 - 2020</p>
-              <p className="px-6 lg:py-8 lg:hidden">
-                I did the cbc of the career for more than a year in which I acquired various
-                knowledge that expanded my creativity and gave me tools to complement front end
-                development
-              </p>
-              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5 6 7 8 9</span>
-                <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p>
-                  <p className="max-w-2xl pl-4">University of Buenos aires (UBA)</p>
-                  <p className="max-w-2xl pl-4">Graphic design</p>
-                  <p className="max-w-2xl pl-4">2019 - 2020</p>
-                  <p className="max-w-2xl pl-4">
-                    I did the cbc of the career for more than a year in which I acquired various
-                    knowledge that expanded my creativity and gave me tools to complement front end
-                    development
-                  </p>
-                  <p>{"*/}"}</p>
+              <ul className="flex flex-col gap-4 p-6 text-gray-200 md:px-28 lg:hidden ">
+                <li className="text-2xl font-bold">🚀My studies</li>
+                <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                <div className="flex flex-col gap-6 px-8 py-2">
+                  <div className="flex flex-col gap-2 ">
+                    <div className="flex flex-col items-start justify-start w-full gap-3 mb-2 ">
+                      <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                        2020 - 2021
+                      </p>
+                      <p>University of Buenos aires</p>
+                      <p className="italic text-slate-400">Graphic design</p>
+                      <p>
+                        I did the cbc of the career for more than a year in which I acquired various
+                        knowledge that expanded my creativity and gave me tools to complement front
+                        end development
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-start justify-start w-full gap-3 mb-2 ">
+                      <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                        2012 - 2019
+                      </p>
+                      <p>Technical School</p>
+                      <p className="italic text-slate-400">Computer technician</p>
+                      <p>
+                        Acquiring solid knowledge about analytical thinking and object-oriented
+                        programming foundations, I also learned several languages, including C++, C#
+                        and MySQL that gave me the foundation for my career as a fullstack developer
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </ul>
+              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-180px)] lg:flex lg:items-center">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
+                  <li className="text-4xl font-bold">🚀My studies</li>
+                  <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                  <div className="flex flex-col gap-4 px-12 py-2 lg:max-h-[calc(100vh-350px)] lg:overflow-y-auto">
+                    <div className="flex flex-col gap-2">
+                      <div className="flex flex-col items-start justify-start w-full gap-3 mb-2">
+                        <div className="gap-4 lg:flex lg:flex-col lg:items-start xl:flex-row xl:items-center">
+                          <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                            2020 - 2021
+                          </p>
+                          <div className="flex gap-1">
+                            <p>University of Buenos aires</p>
+                            <span className="text-rose-500">-</span>
+                            <p className="italic text-slate-400">Graphic design</p>
+                          </div>
+                        </div>
+                        <p>
+                          I did the cbc of the career for more than a year in which I acquired
+                          various knowledge that expanded my creativity and gave me tools to
+                          complement front end development
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-start justify-start w-full gap-3 mb-2">
+                        <div className="gap-4 lg:flex lg:flex-col lg:items-start xl:flex-row xl:items-center">
+                          <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                            2012 - 2019
+                          </p>
+                          <div className="flex gap-1">
+                            <p>Technical School</p>
+                            <span className="text-rose-500">-</span>
+                            <p className="italic text-slate-400">Computer technician</p>
+                          </div>
+                        </div>
+                        <p>
+                          Acquiring solid knowledge about analytical thinking and object-oriented
+                          programming foundations, I also learned several languages, including C++,
+                          C# and MySQL that gave me the foundation for my career as a fullstack
+                          developer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </ul>
               </div>
             </div>
           ) : educationCoursesDetail ? (
