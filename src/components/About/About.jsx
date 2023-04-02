@@ -311,7 +311,7 @@ export const About = () => {
             </button>
           </div>
         </div>
-        <main className="lg:ml-[430px] mb-8 md:h-min lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
+        <main className="lg:ml-[430px] mb-8 md:h-min lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%] ">
           {interestsDetail ? (
             <div className="flex flex-col h-full gap-1">
               <h3 className="px-5 py-5 text-slate-400  lg:border-b lg:border-[rgba(255,255,255,0.1)]">
@@ -397,46 +397,134 @@ export const About = () => {
               </div>
             </div>
           ) : educationCoursesDetail ? (
-            <div className="flex flex-col h-full gap-1">
-              <h3 className="px-5 py-5 text-slate-400 lg:border-b lg:border-slate-700">
-                //Courses
+            <div className="flex flex-col h-min border-t-2 lg:border-t-0 border-[rgba(255,255,255,0.1)]">
+              <h3 className="px-5 py-5 text-slate-400 border-b border-[rgba(255,255,255,0.1)]">
+                //courses.md
               </h3>
-              <p className="px-6 lg:py-8 lg:hidden">Bootcamp Henry</p>
-              <p className="px-6 lg:py-8 lg:hidden">Fullsatck Developer</p>
-              <p className="px-6 lg:py-8 lg:hidden">March - September (2022)</p>
-              <p className="px-6 lg:py-8 lg:hidden">
-                I took the henry bootcamp course which gave me the tools to be able to develop a web
-                page both from the front end and from the backend, it also gave me knowledge and
-                experience working as a team.
-              </p>
-              <p className="px-6 lg:py-8 lg:hidden">Aprendé programando</p>
-              <p className="px-6 lg:py-8 lg:hidden">Web development</p>
-              <p className="px-6 lg:py-8 lg:hidden">April - September(2016)</p>
-              <p className="px-6 lg:py-8 lg:hidden">
-                I took a course that gave me the knowledge of HTML, CSS and some bases of
-                javascript.
-              </p>
-              <div className="justify-start hidden min-h-full pt-10 pl-10 lg:flex">
-                <span className="flex w-2">1 2 3 4 5 6 7 8 9 10 11 12 13 14</span>
-                <div className="px-6 lg:flex lg:flex-col">
-                  <p>{"{/*"}</p>
-                  <p className="max-w-2xl pl-4">Bootcamp Henry</p>
-                  <p className="max-w-2xl pl-4">Fullsatck Developer</p>
-                  <p className="max-w-2xl pl-4">March - September (2022)</p>
-                  <p className="max-w-2xl pl-4">
-                    I took the henry bootcamp course which gave me the tools to be able to develop a
-                    web page both from the front end and from the backend, it also gave me knowledge
-                    and experience working as a team.
-                  </p>
-                  <p className="max-w-2xl pl-4">Aprendé programando</p>
-                  <p className="max-w-2xl pl-4">Web development</p>
-                  <p className="max-w-2xl pl-4">April - September (2016)</p>
-                  <p className="max-w-2xl pl-4">
-                    I took a course that gave me the knowledge of HTML, CSS and some bases of
-                    javascript.
-                  </p>
-                  <p>{"*/}"}</p>
+              <ul className="flex flex-col gap-4 p-6 text-gray-200 md:px-28 lg:hidden ">
+                <li className="text-2xl font-bold">🌱My courses</li>
+                <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                <div className="flex flex-col gap-6 px-8 py-2">
+                  <div className="flex flex-col gap-2 ">
+                    <div className="flex flex-col items-start justify-start w-full gap-3 mb-2 ">
+                      <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                        Oct 22 - present
+                      </p>
+                      <p>Bootcamp Nucba</p>
+                      <p className="italic text-slate-400">Fullstack Developer</p>
+                    </div>
+                    <p>
+                      I am learning to code both the frontend and backend of web applications using
+                      HTML, CSS, JavaScript, Node.js, and React. Also, I'm learning about
+                      non-relational databases like MongoDB and how to build scalable and secure
+                      applications. All of this is allowing me to gain a deep understanding of the
+                      software development process and how to create high quality and effective
+                      solutions for complex web projects.
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-2 ">
+                    <div className="flex flex-col items-start justify-start w-full gap-3 mb-2 ">
+                      <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                        Mar 22 - Sep 22
+                      </p>
+                      <p>Bootcamp Soy Henry</p>
+                      <p className="italic text-slate-400">Fullstack Developer</p>
+                    </div>
+                    <p>
+                      During my experience at Soy Henry, I have gained strong web programming skills
+                      and cutting-edge technologies such as JavaScript, React, Node.js, MongoDB, and
+                      MySQL. Furthermore, I have improved my soft skills, including effective
+                      communication, teamwork and problem solving. As a result, I have the ability
+                      to build complete web applications.
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-2 ">
+                    <div className="flex flex-col items-start justify-start w-full gap-3 mb-2 ">
+                      <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                        Mar 16 - Nov 16
+                      </p>
+                      <p>Aprende programando</p>
+                      <p className="italic text-slate-400">Introduction to web development</p>
+                    </div>
+                    <p>
+                      During my introductory course on basic web development, I've learned the
+                      fundamentals of building websites, including HTML, CSS, and JavaScript. I have
+                      gained skills in creating static web pages, design and content structuring,
+                      and I have learned to style pages using CSS.
+                    </p>
+                  </div>
                 </div>
+              </ul>
+              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-180px)] lg:flex lg:items-center">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
+                  <li className="text-4xl font-bold">🌱My courses</li>
+                  <span className="border-b border-[rgba(255,255,255,0.1)]" />
+                  <div className="flex flex-col gap-4 px-12 py-2 lg:max-h-[calc(100vh-350px)] lg:overflow-y-auto">
+                    <div className="flex flex-col gap-2">
+                      <div className="flex flex-col items-start justify-start w-full gap-3 mb-2">
+                        <div className="gap-4 lg:flex lg:flex-col lg:items-start xl:flex-row xl:items-center">
+                          <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                            Oct 22 - present
+                          </p>
+                          <div className="flex gap-1">
+                            <p>Bootcamp Nucba</p>
+                            <span className="text-rose-500">-</span>
+                            <p className="italic text-slate-400">Fullstack Developer</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        I am learning to code both the frontend and backend of web applications
+                        using HTML, CSS, JavaScript, Node.js, and React. Also, I'm learning about
+                        non-relational databases like MongoDB and how to build scalable and secure
+                        applications. All of this is allowing me to gain a deep understanding of the
+                        software development process and how to create high quality and effective
+                        solutions for complex web projects.
+                      </p>
+                    </div>
+                    <div className="flex flex-col gap-2 ">
+                      <div className="flex flex-col items-start justify-start w-full gap-3 mb-2">
+                        <div className="gap-4 lg:flex lg:flex-col lg:items-start xl:flex-row xl:items-center">
+                          <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                            Mar 22 - Sep 22
+                          </p>
+                          <div className="flex gap-1">
+                            <p>Bootcamp Soy Henry</p>
+                            <span className="text-rose-500">-</span>
+                            <p className="italic text-slate-400">Fullstack Developer</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        During my experience at Soy Henry, I have gained strong web programming
+                        skills and cutting-edge technologies such as JavaScript, React, Node.js,
+                        MongoDB, and MySQL. Furthermore, I have improved my soft skills, including
+                        effective communication, teamwork and problem solving. As a result, I have
+                        the ability to build complete web applications.
+                      </p>
+                    </div>
+                    <div className="flex flex-col gap-2 ">
+                      <div className="flex flex-col items-start justify-start w-full gap-3 mb-2">
+                        <div className="gap-4 lg:flex lg:flex-col lg:items-start xl:flex-row xl:items-center">
+                          <p className="px-4 py-2 text-sm bg-gray-600 border border-gray-800 drop-shadow-2xl rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20">
+                            Mar 16 - Nov 16
+                          </p>
+                          <div className="flex gap-1">
+                            <p>Aprende programando</p>
+                            <span className="text-rose-500">-</span>
+                            <p className="italic text-slate-400">Introduction to web development</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        During my introductory course on basic web development, I've learned the
+                        fundamentals of building websites, including HTML, CSS, and JavaScript. I
+                        have gained skills in creating static web pages, design and content
+                        structuring, and I have learned to style pages using CSS.
+                      </p>
+                    </div>
+                  </div>
+                </ul>
               </div>
             </div>
           ) : hobbiesDetail ? (
@@ -445,7 +533,7 @@ export const About = () => {
                 //hobbies.md
               </h3>
               <ul className="flex flex-col gap-4 p-6 text-gray-200 md:px-28 lg:hidden">
-                <li className="text-2xl font-bold">🎮 My hobbies</li>
+                <li className="text-2xl font-bold">🎮My hobbies</li>
                 <span className="border-b border-[rgba(255,255,255,0.1)]" />
                 <p className="px-6">
                   In my free time I really like to work on small projects to develop my skills in
@@ -466,7 +554,7 @@ export const About = () => {
                 </p>
               </ul>
               <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
-                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
                   <li className="text-4xl font-bold">🎮My hobbies</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <div className="flex flex-col gap-4 px-12 py-2">
@@ -536,7 +624,7 @@ export const About = () => {
                 </div>
               </ul>
               <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
-                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
                   <li className="text-4xl font-bold">👨‍💻Work</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <div className="flex flex-col gap-4 px-12 py-2">
@@ -598,7 +686,7 @@ export const About = () => {
                 </div>
               </ul>
               <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
-                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
                   <li className="text-4xl font-bold">🎨Skills</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <div className="flex flex-col gap-3 px-12 py-2">
@@ -636,7 +724,7 @@ export const About = () => {
                 </div>
               </ul>
               <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
-                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
                   <li className="text-4xl font-bold">💻Skills</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <div className="flex flex-col gap-3 px-12 py-2">
@@ -674,7 +762,7 @@ export const About = () => {
                 </div>
               </ul>
               <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
-                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
                   <li className="text-4xl font-bold">💾Skills</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <div className="flex flex-col gap-3 px-12 py-2">
@@ -733,7 +821,7 @@ export const About = () => {
                 </div>
               </ul>
               <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
-                <ul className="flex flex-col w-3/4 gap-5 py-6 h-min">
+                <ul className="flex flex-col w-[90%] gap-5 h-min">
                   <li className="text-4xl font-bold">📖 Overview</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <div className="flex flex-col gap-3">

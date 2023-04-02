@@ -3,22 +3,12 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  const [changeBg, setChangeBg] = useState(false);
-
-  const changeBackground = () => {
-    if (window.scrollY >= 20) {
-      setChangeBg(true);
-    } else {
-      setChangeBg(false);
-    }
-  };
-  window.addEventListener("scroll", changeBackground);
 
   return (
     <nav
-      className={`transition-colors w-full z-10 fixed lg:flex border-b border-[rgba(255,255,255,0.1)] lg:h-[48px] ${
+      className={`backdrop-filter backdrop-blur-lg sm:border-b-1 transition-colors w-full z-10 fixed lg:flex border-b border-[rgba(255,255,255,0.1)] lg:h-[48px] ${
         navbar ? "h-screen sm:h-auto backdrop-filter backdrop-blur-lg sm:border-b-1" : null
-      } ${changeBg ? "backdrop-filter backdrop-blur-lg sm:border-b-1 " : null}`}
+      }`}
     >
       <div className="justify-start mx-auto lg:max-w-7xl md:items-center md:flex md:mx-0 xl:max-w-full">
         <div className="flex items-center justify-end py-3 md:py-5 md:block">
