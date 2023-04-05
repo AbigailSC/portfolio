@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Navbar } from "../Navbar/Navbar";
 import { Project } from "../Project/Project";
 import { projects } from "../utils/dataProjects.js";
-import { filterTecnologiesFunc } from "../utils/filterTecnologies.js";
 import { RiArrowRightSFill, RiArrowDownSFill } from "react-icons/ri";
 import { SiReact, SiRedux, SiTypescript, SiHtml5, SiCss3 } from "react-icons/si";
 import { Footer } from "../Footer/Footer";
@@ -19,17 +18,17 @@ export const Projects = () => {
     <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col w-full pt-20 text-xl lg:flex-row lg:pt-12">
-        <div className="flex flex-col lg:w-[30%] xl:w-[20%] 2xl:w-[15%] gap-1 lg:gap-0 lg:min-h-[calc(100vh-106px)] lg:border-r lg:border-slate-700">
+        <div className="lg:fixed flex flex-col lg:w-[400px] lg:gap-0 lg:h-[calc(100vh-106px)] lg:border-r lg:border-[rgba(255,255,255,0.1)]">
           <h2 className="p-5 text-gray-200">_projects</h2>
           <button
-            className="flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start bg-slate-800 hover:text-gray-200 hover:transition-all lg:bg-inherit lg:border-y lg:border-slate-700"
+            className="border-y border-[rgba(255,255,255,0.1)] flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all lg:bg-inherit lg:border-y lg:border-[rgba(255,255,255,0.1)] focus:bg-gray-800 focus:bg-opacity-50"
             onClick={() => setProjectsDisplay(!projectsDisplay)}
           >
             {projectsDisplay ? <RiArrowDownSFill /> : <RiArrowRightSFill />}
             projects
           </button>
           <div
-            className={`px-6 py-6 border-b border-slate-700 ${
+            className={`px-6 py-6 border-b border-[rgba(255,255,255,0.1)] ${
               projectsDisplay ? "flex flex-col" : "hidden"
             }`}
           >
@@ -113,11 +112,11 @@ export const Projects = () => {
           </div>
         </div>
 
-        <main className="mb-8 lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
-          <h3 className="px-5 py-5 text-gray-200 lg:border-b lg:border-slate-700">
+        <main className="lg:ml-[400px] mb-8 md:h-min lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
+          <h3 className="px-5 py-5 text-gray-200 lg:border-b lg:border-[rgba(255,255,255,0.1)]">
             // All Projects
           </h3>
-          <div className="flex flex-col items-center gap-1 px-6 lg:py-8 xl:flex-row xl:flex-wrap xl:justify-center">
+          <div className="grid grid-cols-1 gap-1 px-6 md:grid-cols-2 lg:py-8 xl:grid-cols-2 2xl:grid-cols-3">
             {projects.map((project, index) =>
               project.tecnologies.includes(tecnologies) ? (
                 <Project

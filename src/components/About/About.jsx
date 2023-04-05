@@ -131,7 +131,7 @@ export const About = () => {
     <div className="flex flex-col justify-between min-h-screen bg-gradient-to-r text-slate-400 font-RobotoMono">
       <Navbar />
       <section className="flex flex-col w-full pt-20 text-xl lg:flex-row lg:pt-[48px]">
-        <div className="lg:fixed flex flex-col lg:w-[430px] lg:gap-0 lg:h-[calc(100vh-106px)] lg:border-r lg:border-[rgba(255,255,255,0.1)]">
+        <div className="lg:fixed flex flex-col lg:w-[400px] lg:gap-0 lg:h-[calc(100vh-106px)] lg:border-r lg:border-[rgba(255,255,255,0.1)]">
           <h2 className="p-5 text-gray-200">.AboutMe</h2>
           <button
             className="border-y border-[rgba(255,255,255,0.1)] flex items-center w-full px-5 py-2 transition duration-300 ease-in-out text-start hover:text-gray-200 hover:transition-all lg:bg-inherit lg:border-y lg:border-[rgba(255,255,255,0.1)] focus:bg-gray-800 focus:bg-opacity-50"
@@ -264,7 +264,7 @@ export const About = () => {
             </button>
           </div>
         </div>
-        <main className="lg:ml-[430px] mb-8 md:h-min lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%] ">
+        <main className="lg:ml-[430px] mb-8 md:h-min lg:w-[70%] lg:py-0 xl:w-[80%] 2xl:w-[85%]">
           {interestsDetail ? (
             <div className="flex flex-col h-min border-t-2 lg:border-t-0 border-[rgba(255,255,255,0.1)]">
               <h3 className="px-5 py-5 text-slate-400 border-b border-[rgba(255,255,255,0.1)]">
