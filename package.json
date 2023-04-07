@@ -1,6 +1,5 @@
 {
   "name": "portfolio",
-  "homepage": "https://abigailsc.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
-    "preview": "vite preview",
-    "predeploy": "npm run build && echo abigailsc.dev > ./dist/CNAME",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
