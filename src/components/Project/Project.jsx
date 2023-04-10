@@ -24,7 +24,7 @@ export const Project = ({ name, img, index, description, deployLink, tecnologies
             {tecnologies.map((tecnology, index) => (
               <li
                 key={index}
-                className="px-2 py-1 text-sm leading-none text-center text-gray-200 list-outside rounded bg-rose-600 whitespace-nowrap list"
+                className="px-2 py-1 text-sm leading-none text-center text-gray-200 list-outside border border-gray-200 rounded whitespace-nowrap list"
               >
                 {tecnology}
               </li>
