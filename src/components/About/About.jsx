@@ -281,12 +281,6 @@ export const About = () => {
                   work for to deliver high-quality services to potential and current clients.
                 </p>
                 <p className="px-6">
-                  In addition, I am currently expanding my knowledge of Docker, a powerful tool for
-                  containerization and deployment, which has the potential to streamline
-                  infrastructure and optimize development processes. I am excited to apply this
-                  knowledge to future projects and continue to expand my skillset.
-                </p>
-                <p className="px-6">
                   I am a detail-oriented individual who places a strong emphasis on user-centered
                   design. I believe that the key to creating effective web applications is to
                   understand the needs and expectations of the target audience, and to design
@@ -304,35 +298,31 @@ export const About = () => {
                 <ul className="flex flex-col w-[90%] gap-5 h-min">
                   <li className="text-4xl font-bold">📌Interests</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
-                  <div className="flex flex-col gap-4 px-12 py-2">
-                    <p>
-                      I am a passionate learner with a keen interest in web design and user
-                      interface design. I am always striving to expand my knowledge and skills in
-                      these areas in order to provide the best possible service to clients. My
-                      ultimate goal is to gain more experience in the field of Web Development and
-                      collaborate with the company I work for to deliver high-quality services to
-                      potential and current clients.
-                    </p>
-                    <p>
-                      In addition, I am currently expanding my knowledge of Docker, a powerful tool
-                      for containerization and deployment, which has the potential to streamline
-                      infrastructure and optimize development processes. I am excited to apply this
-                      knowledge to future projects and continue to expand my skillset.
-                    </p>
-                    <p>
-                      I am a detail-oriented individual who places a strong emphasis on
-                      user-centered design. I believe that the key to creating effective web
-                      applications is to understand the needs and expectations of the target
-                      audience, and to design interfaces that are intuitive, functional, and
-                      aesthetically pleasing.
-                    </p>
-                    <p>
-                      Overall, I am a dedicated and passionate web design and development
-                      professional who is committed to delivering high-quality services to clients.
-                      With my strong foundation in web design and development technologies and my
-                      ongoing commitment to learning and updating my skillset, I am confident that I
-                      can make a valuable contribution to any team.
-                    </p>
+                  <div className="flex flex-col gap-4 px-12 py-2 lg:max-h-[calc(100vh-350px)] lg:overflow-y-auto">
+                    <div className="flex flex-col gap-2">
+                      <p>
+                        I am a passionate learner with a keen interest in web design and user
+                        interface design. I am always striving to expand my knowledge and skills in
+                        these areas in order to provide the best possible service to clients. My
+                        ultimate goal is to gain more experience in the field of Web Development and
+                        collaborate with the company I work for to deliver high-quality services to
+                        potential and current clients.
+                      </p>
+                      <p>
+                        I am a detail-oriented individual who places a strong emphasis on
+                        user-centered design. I believe that the key to creating effective web
+                        applications is to understand the needs and expectations of the target
+                        audience, and to design interfaces that are intuitive, functional, and
+                        aesthetically pleasing.
+                      </p>
+                      <p>
+                        Overall, I am a dedicated and passionate web design and development
+                        professional who is committed to delivering high-quality services to
+                        clients. With my strong foundation in web design and development
+                        technologies and my ongoing commitment to learning and updating my skillset,
+                        I am confident that I can make a valuable contribution to any team.
+                      </p>
+                    </div>
                   </div>
                 </ul>
               </div>
@@ -809,9 +799,9 @@ export const About = () => {
                 //Personal information
               </h3>
               <ul className="flex flex-col gap-3 p-6 text-gray-200 md:px-28 lg:hidden">
-                <li className="text-2xl font-bold">📖 Overview</li>
+                <li className="text-2xl font-bold">📖Overview</li>
                 <span className="border-b border-[rgba(255,255,255,0.1)]" />
-                <div className="flex flex-col gap-3 mb-8">
+                <div className="flex flex-col gap-3 px-6 mb-8">
                   <h3 className="text-xl font-normal">Passionate Developer</h3>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <p className="text-base">
@@ -821,7 +811,7 @@ export const About = () => {
                     and development.
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 mb-8">
+                <div className="flex flex-col gap-3 px-6 mb-8">
                   <h3 className="text-xl font-normal">Impactful Programming</h3>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <p className="text-base">
@@ -832,7 +822,7 @@ export const About = () => {
                     contributions to the tech community.
                   </p>
                 </div>
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 px-6">
                   <h3 className="text-xl font-normal">From Graphic Design to Full Stack</h3>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
                   <p className="text-base">
@@ -844,11 +834,11 @@ export const About = () => {
                   </p>
                 </div>
               </ul>
-              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-200px)] lg:flex lg:items-center">
+              <div className="hidden w-full lg:justify-center lg:h-[calc(100vh-180px)] lg:flex lg:items-center">
                 <ul className="flex flex-col w-[90%] gap-5 h-min">
-                  <li className="text-4xl font-bold">📖 Overview</li>
+                  <li className="text-4xl font-bold">📖Overview</li>
                   <span className="border-b border-[rgba(255,255,255,0.1)]" />
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-4 px-12 py-2 lg:max-h-[calc(100vh-350px)] lg:overflow-y-auto">
                     <div className="flex flex-col gap-3 mb-8">
                       <h3 className="text-2xl font-normal">Passionate Developer</h3>
                       <span className="border-b border-[rgba(255,255,255,0.1)]" />
