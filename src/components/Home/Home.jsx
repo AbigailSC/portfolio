@@ -5,6 +5,11 @@ import { projectsReverse } from "../utils/dataProjects.js";
 import { HiDownload } from "react-icons/hi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import CV from "../../assets/CV_Abigail_Sarzuri_Fullstack_Developer.pdf";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+
+import { EffectCoverflow } from "swiper";
 
 export const Home = () => {
   const [text, count] = useTypewriter({
@@ -14,14 +19,15 @@ export const Home = () => {
     deleteSpeed: 20,
     delaySpeed: 4000,
   });
-  const boxLanding = projectsReverse.filter((obj) => obj.id < 3);
+  const length = projectsReverse.length;
+  const boxLanding = projectsReverse.filter((obj) => obj.id > length - 4);
   return (
     <div
       className={`flex flex-col justify-between w-full h-full min-h-screen text-slate-400 font-RobotoMono`}
     >
       <Navbar />
-      <section className="flex flex-col justify-center md:pt-20 lg:pt-60 items-center text-center gap-10 leading-10 h-[90%] lg:flex-row lg:text-left xl:pt-72 xl:gap-36">
-        <div className="flex flex-col gap-20 pt-20 mt-2 lg:pt-0">
+      <section className="flex flex-col items-center justify-between h-[90vh] gap-4 leading-10 text-center lg:px-10 lg:flex-row lg:text-left lg:pt-6 xl:pt-0 xl:justify-center xl:gap-20">
+        <div className="flex flex-col justify-center gap-5 mt-16h-[60%] lg:mt-0 sm:w-full sm:h-[40%] xl:w-[50%] xl:max-w-[800px] 2xl:max-w-[700px]">
           <div className="flex flex-col gap-2">
             <h2 className="text-xl xl:text-2xl">Hi all! I am</h2>
             <h1 className="text-6xl xl:text-7xl">Abigail Sarzuri</h1>
@@ -29,7 +35,7 @@ export const Home = () => {
               {text} <Cursor />
             </h2>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
             <h2 className="text-xl text-slate-500">//download my CV:</h2>
             <button className="flex shadow-xl justify-center self-center max-w-[200px] px-4 py-3 text-lg rounded-xl lg:self-start bg-slate-800 transition duration-300 ease-in-out hover:transition-all hover:bg-slate-700 hover:text-gray-200">
               <a href={CV} download={CV} className="flex items-center self-center gap-2">
@@ -38,15 +44,38 @@ export const Home = () => {
             </button>
           </div>
         </div>
-        <div className="w-[300px] lg:w-[400px] mb-48 ">
-          {boxLanding.map((project, index) => (
-            <div key={index} className="grid w-full h-16">
-              <div className="p-1 border rounded-lg shadow-xl border-slate-700 bg-slate-800 text-start ">
-                <h2 className="px-2">Project {index + 1}</h2>
-                <img src={project.img} alt={project.name} />
-              </div>
-            </div>
-          ))}
+        <div className="w-full h-[40%] flex items-center px-10 lg:w-[400px] mb-4sm:w-full sm:h-[60%] lg:h-[300px] lg:mb-0 lg:px-0 xl:h-min xl:w-[540px] 2xl:w-[580px] 2xl:h-[340px]">
+          <Swiper
+            direction="vertical"
+            slidesPerView={1}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            effect="coverflow"
+            cubeEffect={{
+              shadow: true,
+              slideShadows: true,
+              shadowOffset: 20,
+              shadowScale: 0.94,
+            }}
+            modules={[EffectCoverflow]}
+            centeredSlides={true}
+            grabCursor={true}
+            className="w-full max-w-[400px] h-[80%] lg:w-[500px]sm:max-w-[512px] sm:h-[67%] md:h-[74%] lg:h-[250px] xl:h-[320px] xl:max-w-full xl:w-full 2xl:h-[340px]"
+          >
+            {boxLanding.map((project, index) => (
+              <SwiperSlide key={index} className="grid w-full h-52 sm:h-60 lg:h-full">
+                <div className="p-1 flex flex-col justify-around rounded-lg shadow-xl border-[rgba(255,255,255,0.1) bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-start">
+                  <h2 className="px-2">
+                    Project {index + 1} <span className="text-rose-500"> @ </span>
+                    {project.name}
+                  </h2>
+                  <img src={project.img} alt={project.name} className="rounded-lg" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
       <Footer />
