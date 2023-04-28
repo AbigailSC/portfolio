@@ -26,8 +26,8 @@ export const Home = () => {
       className={`flex flex-col justify-between w-full h-full min-h-screen text-slate-400 font-RobotoMono`}
     >
       <Navbar />
-      <section className="flex flex-col items-center justify-between h-[90vh] gap-4 leading-10 text-center lg:px-10 lg:flex-row lg:text-left lg:pt-6 xl:pt-0 xl:justify-center xl:gap-20">
-        <div className="flex flex-col justify-center gap-5 mt-16h-[60%] lg:mt-0 sm:w-full sm:h-[40%] xl:w-[50%] xl:max-w-[800px] 2xl:max-w-[700px]">
+      <section className="flex mt-16 flex-col items-center justify-center h-[90vh] gap-4 leading-10 text-center lg:px-10 lg:flex-row lg:text-left lg:pt-6 xl:pt-0 xl:justify-center xl:gap-20">
+        <div className="flex flex-col justify-center gap-5 mt-16h-[60%] sm:w-full sm:mt-16 sm:h-[40%] lg:mt-0 xl:w-[50%] xl:max-w-[800px] 2xl:max-w-[700px]">
           <div className="flex flex-col gap-2">
             <h2 className="text-xl xl:text-2xl">Hi all! I am</h2>
             <h1 className="text-6xl xl:text-7xl">Abigail Sarzuri</h1>
@@ -44,7 +44,7 @@ export const Home = () => {
             </button>
           </div>
         </div>
-        <div className="w-full h-[40%] flex items-center px-10 lg:w-[400px] mb-4sm:w-full sm:h-[60%] lg:h-[300px] lg:mb-0 lg:px-0 xl:h-min xl:w-[540px] 2xl:w-[580px] 2xl:h-[340px]">
+        <div className="w-full h-[40%] flex items-center px-10 lg:w-[700px] mb-4 sm:w-full sm:h-[60%] lg:h-[280px] lg:mb-0 lg:px-0 xl:h-min xl:w-[540px] 2xl:w-[580px] 2xl:h-[340px]">
           <Swiper
             direction="vertical"
             slidesPerView={1}
@@ -62,7 +62,7 @@ export const Home = () => {
             modules={[EffectCoverflow]}
             centeredSlides={true}
             grabCursor={true}
-            className="w-full max-w-[400px] h-[80%] lg:w-[500px]sm:max-w-[512px] sm:h-[67%] md:h-[74%] lg:h-[250px] xl:h-[320px] xl:max-w-full xl:w-full 2xl:h-[340px]"
+            className="w-full max-w-[400px] h-[80%] sm:max-w-[512px] sm:h-[67%] md:h-[74%] lg:h-[270px] lg:max-w-full xl:h-[320px] xl:max-w-full lg:w-full 2xl:h-[340px]"
           >
             {boxLanding.map((project, index) => (
               <SwiperSlide key={index} className="grid w-full h-52 sm:h-60 lg:h-full">
