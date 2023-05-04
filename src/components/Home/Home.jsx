@@ -64,11 +64,11 @@ export const Home = () => {
             grabCursor={true}
             className="w-full max-w-[400px] h-[80%] sm:max-w-[512px] sm:h-[67%] md:h-[74%] lg:h-[270px] lg:max-w-full xl:h-[320px] xl:max-w-full lg:w-full 2xl:h-[340px]"
           >
-            {boxLanding.map((project, index) => (
-              <SwiperSlide key={index} className="grid w-full h-52 sm:h-60 lg:h-full">
+            {boxLanding.reverse().map((project) => (
+              <SwiperSlide key={project.id} className="grid w-full h-52 sm:h-60 lg:h-full">
                 <div className="p-1 flex flex-col justify-around rounded-lg shadow-xl border-[rgba(255,255,255,0.1) bg-gray-600 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 text-start">
                   <h2 className="px-2">
-                    Project {index + 1} <span className="text-rose-500"> @ </span>
+                    Project {project.id + 1} <span className="text-rose-500"> @ </span>
                     {project.name}
                   </h2>
                   <img src={project.img} alt={project.name} className="rounded-lg" />
