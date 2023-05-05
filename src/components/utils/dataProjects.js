@@ -1,8 +1,18 @@
 export const projects = [
   {
+    name: 'Todo List',
+    rol: 'Frontend Developer',
+    date: ['Mayo 2023', 'Mayo 2023'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1683235306/Captura-de-pantalla-_910__foiaym.webp',
+    deployLink: 'https://e1-react-six.vercel.app/',
+    tecnologies: ["React", "React Context", "Styled Components"],
+    id: 8,
+    description: 'Todo list application with local storage'
+  },
+  {
     name: 'Piano App',
     rol: 'Frontend Developer',
-    date: ['Febrero 20232', 'Febrero 2023'],
+    date: ['Febrero 2023', 'Febrero 2023'],
     img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1682690827/pianoapp_tt9se3.webp',
     deployLink: 'https://piano-angular-lyart.vercel.app/',
     tecnologies: ["Angular", "Typescript", "CSS", "HTML"],
@@ -161,5 +171,15 @@ export const projectsReverse = [
     tecnologies: ['Angular", "Typescript", "CSS'],
     id: 7,
     description: 'Piano application to play piano with keyboard, only medium and large screens'
+  },
+  {
+    name: 'Todo List',
+    rol: 'Frontend Developer',
+    date: ['Mayo 2023', 'Mayo 2023'],
+    img: 'https://res.cloudinary.com/dbhb8sohh/image/upload/v1683235306/Captura-de-pantalla-_910__foiaym.webp',
+    deployLink: 'https://e1-react-six.vercel.app/',
+    tecnologies: ["React", "React Context", "Styled Components"],
+    id: 8,
+    description: 'Todo list application with local storage'
   },
 ]
