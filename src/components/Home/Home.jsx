@@ -4,7 +4,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { projectsReverse } from "../utils/dataProjects.js";
 import { HiDownload } from "react-icons/hi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import CV from "../../assets/CV_Abigail_Sarzuri_Fullstack_Developer.pdf";
+import CV from "../../assets/Abigail_Sarzuri_Backend_Developer.pdf";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
